@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0695AE67E04A0A3D79A83FFE /* Pods_SchatzmAIster.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0CD4C0E7A8F40D87B12BA5C /* Pods_SchatzmAIster.framework */; };
 		37DBD27D20BC304E0041E266 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37DBD27C20BC304E0041E266 /* AppDelegate.swift */; };
 		37DBD27F20BC304E0041E266 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37DBD27E20BC304E0041E266 /* ViewController.swift */; };
 		37DBD28220BC304E0041E266 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 37DBD28020BC304E0041E266 /* Main.storyboard */; };
@@ -22,6 +23,9 @@
 		37DBD28320BC30520041E266 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		37DBD28620BC30520041E266 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		37DBD28820BC30520041E266 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8709F568CE0AA060ABF7A172 /* Pods-SchatzmAIster.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SchatzmAIster.release.xcconfig"; path = "Pods/Target Support Files/Pods-SchatzmAIster/Pods-SchatzmAIster.release.xcconfig"; sourceTree = "<group>"; };
+		90334842E70CFF07B8E9D1C1 /* Pods-SchatzmAIster.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SchatzmAIster.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SchatzmAIster/Pods-SchatzmAIster.debug.xcconfig"; sourceTree = "<group>"; };
+		C0CD4C0E7A8F40D87B12BA5C /* Pods_SchatzmAIster.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SchatzmAIster.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +33,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0695AE67E04A0A3D79A83FFE /* Pods_SchatzmAIster.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +45,8 @@
 			children = (
 				37DBD27B20BC304E0041E266 /* SchatzmAIster */,
 				37DBD27A20BC304E0041E266 /* Products */,
+				57ECB25937392F46B545CC02 /* Pods */,
+				C8F0B65C209D28A4BC8E68D0 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -64,6 +71,23 @@
 			path = SchatzmAIster;
 			sourceTree = "<group>";
 		};
+		57ECB25937392F46B545CC02 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				90334842E70CFF07B8E9D1C1 /* Pods-SchatzmAIster.debug.xcconfig */,
+				8709F568CE0AA060ABF7A172 /* Pods-SchatzmAIster.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		C8F0B65C209D28A4BC8E68D0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C0CD4C0E7A8F40D87B12BA5C /* Pods_SchatzmAIster.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -71,6 +95,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 37DBD28B20BC30520041E266 /* Build configuration list for PBXNativeTarget "SchatzmAIster" */;
 			buildPhases = (
+				5948DA05ED29A01F925E2735 /* [CP] Check Pods Manifest.lock */,
 				37DBD27520BC304E0041E266 /* Sources */,
 				37DBD27620BC304E0041E266 /* Frameworks */,
 				37DBD27720BC304E0041E266 /* Resources */,
@@ -129,6 +154,27 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		5948DA05ED29A01F925E2735 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SchatzmAIster-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		37DBD27520BC304E0041E266 /* Sources */ = {
@@ -278,15 +324,13 @@
 		};
 		37DBD28C20BC30520041E266 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 90334842E70CFF07B8E9D1C1 /* Pods-SchatzmAIster.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 28WXQA64V7;
 				INFOPLIST_FILE = SchatzmAIster/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = ch.mobi.cdays.schatzmaister.SchatzmAIster;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -296,15 +340,13 @@
 		};
 		37DBD28D20BC30520041E266 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8709F568CE0AA060ABF7A172 /* Pods-SchatzmAIster.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 28WXQA64V7;
 				INFOPLIST_FILE = SchatzmAIster/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = ch.mobi.cdays.schatzmaister.SchatzmAIster;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;

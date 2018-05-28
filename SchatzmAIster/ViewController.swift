@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Clarifai_Apple_SDK
 
 class ViewController: UIViewController {
 
