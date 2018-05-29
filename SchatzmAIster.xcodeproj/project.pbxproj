@@ -60,7 +60,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				37ECA3D420BD37E9004CB7B4 /* Clarifai_Apple_SDK.framework in Frameworks */,
 				37ECA3E020BD3845004CB7B4 /* libc++.tbd in Frameworks */,
 				37ECA3E120BD3845004CB7B4 /* libz.tbd in Frameworks */,
 				37ECA3E220BD3846004CB7B4 /* Foundation.framework in Frameworks */,
@@ -68,6 +67,7 @@
 				37ECA3E420BD3846004CB7B4 /* UIKit.framework in Frameworks */,
 				37ECA3D920BD3807004CB7B4 /* CoreGraphics.framework in Frameworks */,
 				37ECA3DA20BD3807004CB7B4 /* Accelerate.framework in Frameworks */,
+				37ECA3D420BD37E9004CB7B4 /* Clarifai_Apple_SDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
