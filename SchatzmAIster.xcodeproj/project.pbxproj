@@ -13,7 +13,6 @@
 		37DBD28420BC30520041E266 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 37DBD28320BC30520041E266 /* Assets.xcassets */; };
 		37DBD28720BC30520041E266 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 37DBD28520BC30520041E266 /* LaunchScreen.storyboard */; };
 		37ECA3D420BD37E9004CB7B4 /* Clarifai_Apple_SDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37ECA3D320BD37E9004CB7B4 /* Clarifai_Apple_SDK.framework */; };
-		37ECA3D520BD37E9004CB7B4 /* Clarifai_Apple_SDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 37ECA3D320BD37E9004CB7B4 /* Clarifai_Apple_SDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		37ECA3D920BD3807004CB7B4 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37ECA3D720BD3806004CB7B4 /* CoreGraphics.framework */; };
 		37ECA3DA20BD3807004CB7B4 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37ECA3D820BD3807004CB7B4 /* Accelerate.framework */; };
 		37ECA3E020BD3845004CB7B4 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 37ECA3DB20BD3845004CB7B4 /* libc++.tbd */; };
@@ -21,16 +20,17 @@
 		37ECA3E220BD3846004CB7B4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37ECA3DD20BD3845004CB7B4 /* Foundation.framework */; };
 		37ECA3E320BD3846004CB7B4 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 37ECA3DE20BD3845004CB7B4 /* libsqlite3.tbd */; };
 		37ECA3E420BD3846004CB7B4 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37ECA3DF20BD3845004CB7B4 /* UIKit.framework */; };
+		37ECA3E720BD4A60004CB7B4 /* Clarifai_Apple_SDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 37ECA3D320BD37E9004CB7B4 /* Clarifai_Apple_SDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		37ECA3D620BD37E9004CB7B4 /* Embed Frameworks */ = {
+		37ECA3E820BD4A61004CB7B4 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
+			buildActionMask = 12;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				37ECA3D520BD37E9004CB7B4 /* Clarifai_Apple_SDK.framework in Embed Frameworks */,
+				37ECA3E720BD4A60004CB7B4 /* Clarifai_Apple_SDK.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -60,6 +60,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				37ECA3D420BD37E9004CB7B4 /* Clarifai_Apple_SDK.framework in Frameworks */,
 				37ECA3E020BD3845004CB7B4 /* libc++.tbd in Frameworks */,
 				37ECA3E120BD3845004CB7B4 /* libz.tbd in Frameworks */,
 				37ECA3E220BD3846004CB7B4 /* Foundation.framework in Frameworks */,
@@ -67,7 +68,6 @@
 				37ECA3E420BD3846004CB7B4 /* UIKit.framework in Frameworks */,
 				37ECA3D920BD3807004CB7B4 /* CoreGraphics.framework in Frameworks */,
 				37ECA3DA20BD3807004CB7B4 /* Accelerate.framework in Frameworks */,
-				37ECA3D420BD37E9004CB7B4 /* Clarifai_Apple_SDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -130,7 +130,7 @@
 				37ECA3E520BD3854004CB7B4 /* ShellScript */,
 				37DBD27620BC304E0041E266 /* Frameworks */,
 				37DBD27720BC304E0041E266 /* Resources */,
-				37ECA3D620BD37E9004CB7B4 /* Embed Frameworks */,
+				37ECA3E820BD4A61004CB7B4 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -368,6 +368,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				VALID_ARCHS = "armv7 armv7s arm64";
 			};
 			name = Debug;
 		};
@@ -390,6 +391,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				VALID_ARCHS = "armv7 armv7s arm64";
 			};
 			name = Release;
 		};
