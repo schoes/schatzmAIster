@@ -16,12 +16,13 @@ var videoPreviewLayer: AVCaptureVideoPreviewLayer?
 class RoomzController:UIViewController {
     
     @IBOutlet var previewView: UIView!
+    @IBOutlet weak var roomTypeNavigationItem: UINavigationItem!
     
     var captureSession: AVCaptureSession?
     var videoPreviewLayer: AVCaptureVideoPreviewLayer?
     
     override func viewDidLoad() {
-        
+        roomTypeNavigationItem.title = "Wo bist du ??"
         super.viewDidLoad()
         
         guard let captureDevice = AVCaptureDevice.default(for: AVMediaType.video) else {

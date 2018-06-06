@@ -10,6 +10,9 @@
 		3765E0C920C7CF3200D02AD3 /* RoomzController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3765E0C820C7CF3200D02AD3 /* RoomzController.swift */; };
 		3765E0CB20C7CF4D00D02AD3 /* AdditionalRoomzController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3765E0CA20C7CF4D00D02AD3 /* AdditionalRoomzController.swift */; };
 		3765E0CD20C7CF5800D02AD3 /* FinishController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3765E0CC20C7CF5800D02AD3 /* FinishController.swift */; };
+		3765E0CF20C7FEDF00D02AD3 /* AtticController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3765E0CE20C7FEDF00D02AD3 /* AtticController.swift */; };
+		3765E0D120C7FF9200D02AD3 /* CellarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3765E0D020C7FF9200D02AD3 /* CellarController.swift */; };
+		3765E0D320C8002500D02AD3 /* GarageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3765E0D220C8002500D02AD3 /* GarageController.swift */; };
 		37DBD27D20BC304E0041E266 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37DBD27C20BC304E0041E266 /* AppDelegate.swift */; };
 		37DBD27F20BC304E0041E266 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37DBD27E20BC304E0041E266 /* ViewController.swift */; };
 		37DBD28220BC304E0041E266 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 37DBD28020BC304E0041E266 /* Main.storyboard */; };
@@ -44,6 +47,9 @@
 		3765E0C820C7CF3200D02AD3 /* RoomzController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomzController.swift; sourceTree = "<group>"; };
 		3765E0CA20C7CF4D00D02AD3 /* AdditionalRoomzController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdditionalRoomzController.swift; sourceTree = "<group>"; };
 		3765E0CC20C7CF5800D02AD3 /* FinishController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinishController.swift; sourceTree = "<group>"; };
+		3765E0CE20C7FEDF00D02AD3 /* AtticController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AtticController.swift; sourceTree = "<group>"; };
+		3765E0D020C7FF9200D02AD3 /* CellarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellarController.swift; sourceTree = "<group>"; };
+		3765E0D220C8002500D02AD3 /* GarageController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GarageController.swift; sourceTree = "<group>"; };
 		37DBD27920BC304E0041E266 /* SchatzmAIster.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SchatzmAIster.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		37DBD27C20BC304E0041E266 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		37DBD27E20BC304E0041E266 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -110,6 +116,9 @@
 				3765E0C820C7CF3200D02AD3 /* RoomzController.swift */,
 				3765E0CA20C7CF4D00D02AD3 /* AdditionalRoomzController.swift */,
 				3765E0CC20C7CF5800D02AD3 /* FinishController.swift */,
+				3765E0CE20C7FEDF00D02AD3 /* AtticController.swift */,
+				3765E0D020C7FF9200D02AD3 /* CellarController.swift */,
+				3765E0D220C8002500D02AD3 /* GarageController.swift */,
 			);
 			path = SchatzmAIster;
 			sourceTree = "<group>";
@@ -220,8 +229,11 @@
 				37DBD27F20BC304E0041E266 /* ViewController.swift in Sources */,
 				37DBD27D20BC304E0041E266 /* AppDelegate.swift in Sources */,
 				3765E0CB20C7CF4D00D02AD3 /* AdditionalRoomzController.swift in Sources */,
+				3765E0CF20C7FEDF00D02AD3 /* AtticController.swift in Sources */,
+				3765E0D320C8002500D02AD3 /* GarageController.swift in Sources */,
 				3765E0C920C7CF3200D02AD3 /* RoomzController.swift in Sources */,
 				3765E0CD20C7CF5800D02AD3 /* FinishController.swift in Sources */,
+				3765E0D120C7FF9200D02AD3 /* CellarController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

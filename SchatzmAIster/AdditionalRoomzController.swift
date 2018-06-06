@@ -11,4 +11,13 @@ import UIKit
 
 class AdditionalRoomzController:UIViewController{
     
+    @IBAction func roomzSelected(_ sender: UIBarButtonItem) {
+    }
+    
+    @IBAction func atticSelected(_ sender: UISwitch, forEvent event: UIEvent) {
+    }
+    @IBAction func cellarSelected(_ sender: UISwitch, forEvent event: UIEvent) {
+    }
+    @IBAction func garageSelected(_ sender: UISwitch, forEvent event: UIEvent) {
+    }
 }
