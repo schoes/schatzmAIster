@@ -11,8 +11,13 @@ import Clarifai_Apple_SDK
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var vbText: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        vbText.layer.borderWidth = 1
+        vbText.layer.cornerRadius = 10
+        vbText.layer.borderColor = UIColor.black.cgColor
         // Do any additional setup after loading the view, typically from a nib.
     }
 
