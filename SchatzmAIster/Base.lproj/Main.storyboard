@@ -270,6 +270,24 @@
                     <view key="view" contentMode="scaleToFill" id="cnB-lq-YHm">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tf0-PL-oBX">
+                                <rect key="frame" x="67" y="218" width="240" height="377"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                            </containerView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="empty_garage" translatesAutoresizingMaskIntoConstraints="NO" id="OYl-Op-Zbh">
+                                <rect key="frame" x="67" y="218" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="halffull_garage" highlightedImage="halffull_attic" translatesAutoresizingMaskIntoConstraints="NO" id="1zl-n5-Msv">
+                                <rect key="frame" x="67" y="343" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="full_garage" translatesAutoresizingMaskIntoConstraints="NO" id="Aye-SP-KiS">
+                                <rect key="frame" x="67" y="467" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="yPJ-5a-oTw"/>
                     </view>
@@ -292,6 +310,27 @@
                     <view key="view" contentMode="scaleToFill" id="snX-yp-lSA">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="o44-sn-7dJ">
+                                <rect key="frame" x="67" y="228" width="240" height="377"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <connections>
+                                    <segue destination="C3U-uS-lf2" kind="embed" id="pgf-zv-hh6"/>
+                                </connections>
+                            </containerView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="empty attic" translatesAutoresizingMaskIntoConstraints="NO" id="f76-v5-hQ1">
+                                <rect key="frame" x="67" y="228" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="halffull_attic" highlightedImage="halffull_attic" translatesAutoresizingMaskIntoConstraints="NO" id="vKR-01-zj9">
+                                <rect key="frame" x="67" y="353" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="full_attic" translatesAutoresizingMaskIntoConstraints="NO" id="PVV-jL-jwj">
+                                <rect key="frame" x="67" y="477" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="I6a-Vu-wQ2"/>
                     </view>
@@ -433,8 +472,27 @@
             </objects>
             <point key="canvasLocation" x="5176.8000000000002" y="1566.5024630541873"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="SCB-Nc-tvb">
+            <objects>
+                <viewController id="C3U-uS-lf2" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="YEl-tG-4ko">
+                        <rect key="frame" x="0.0" y="0.0" width="240" height="377"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Dvs-WW-81k" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
     </scenes>
     <resources>
+        <image name="empty attic" width="1920" height="1280"/>
+        <image name="empty_garage" width="4128" height="2322"/>
+        <image name="full_attic" width="700" height="432"/>
+        <image name="full_garage" width="570" height="380"/>
+        <image name="halffull_attic" width="986" height="555"/>
+        <image name="halffull_garage" width="850" height="430"/>
         <image name="man-with-suitcase-icon" width="256" height="256"/>
     </resources>
 </document>
