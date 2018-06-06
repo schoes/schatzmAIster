@@ -52,10 +52,23 @@
         <scene sceneID="QGN-PX-flc">
             <objects>
                 <tableViewController id="YWm-kI-fdj" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="gZs-hx-b97">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="gZs-hx-b97">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <toolbar key="tableFooterView" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="72I-Ad-8aW">
+                            <rect key="frame" x="0.0" y="72" width="375" height="44"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                            <items>
+                                <barButtonItem title="Neues Zimmer" width="538.33333333333337" id="Z46-mP-LkU">
+                                    <connections>
+                                        <segue destination="rUI-FU-fbf" kind="popoverPresentation" popoverAnchorBarButtonItem="Z46-mP-LkU" id="c4Q-2F-dUa">
+                                            <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                        </segue>
+                                    </connections>
+                                </barButtonItem>
+                            </items>
+                        </toolbar>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="cMO-fc-DPi">
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
@@ -72,11 +85,9 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Deine Zimmer" id="THj-IV-jDZ">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="NhZ-Dl-if6">
+                        <barButtonItem key="rightBarButtonItem" title="Fertig" id="NhZ-Dl-if6">
                             <connections>
-                                <segue destination="rUI-FU-fbf" kind="popoverPresentation" popoverAnchorBarButtonItem="NhZ-Dl-if6" id="KW4-Vn-ulQ">
-                                    <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
-                                </segue>
+                                <segue destination="b13-bj-uU5" kind="show" id="ioa-Kt-2ol"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -190,7 +201,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ces-pX-nJ9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2041" y="825"/>
+            <point key="canvasLocation" x="3257" y="1032"/>
         </scene>
         <!--Finish Controller-->
         <scene sceneID="Q4E-2B-GsM">
@@ -214,7 +225,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hNn-sj-KWd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6524" y="841"/>
+            <point key="canvasLocation" x="7466.3999999999996" y="840.88669950738915"/>
         </scene>
         <!--Cellar Controller-->
         <scene sceneID="gPO-0m-3Cm">
@@ -229,7 +240,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Tyc-OK-s6a" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5178" y="841"/>
+            <point key="canvasLocation" x="6119.1999999999998" y="840.88669950738915"/>
         </scene>
         <!--Garage Controller-->
         <scene sceneID="QV3-kk-Q29">
@@ -314,6 +325,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Am8-Sa-9y1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="4121" y="132"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Mx8-Zd-lSv">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="b13-bj-uU5" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Ybo-wS-70g">
+                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Hdh-rw-Rx2" kind="relationship" relationship="rootViewController" id="XMt-Vw-Kcn"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tSg-ep-22Q" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1977" y="1032"/>
         </scene>
     </scenes>
     <resources>
