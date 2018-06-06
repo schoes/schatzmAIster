@@ -10,4 +10,8 @@ import Foundation
 import UIKit
 class GarageController: UIViewController{
     
+    @IBAction func back(_ sender: Any) {
+        self.navigationController?.popViewController(animated: true)
+        dismiss(animated: true, completion: nil)
+    }
 }

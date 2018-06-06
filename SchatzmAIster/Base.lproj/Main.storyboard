@@ -174,6 +174,26 @@
                                     <segue destination="StJ-dP-RKO" kind="presentation" modalPresentationStyle="pageSheet" id="e0e-nX-u3V"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aqr-NJ-G5F">
+                                <rect key="frame" x="157" y="332" width="60" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Erfassen"/>
+                                <connections>
+                                    <segue destination="J2l-v4-ggH" kind="popoverPresentation" popoverAnchorView="aqr-NJ-G5F" id="4of-Wf-kNa">
+                                        <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                    </segue>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2DR-WL-f3z">
+                                <rect key="frame" x="157" y="392" width="60" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Erfassen"/>
+                                <connections>
+                                    <segue destination="DJ3-ro-Tuz" kind="popoverPresentation" popoverAnchorView="2DR-WL-f3z" id="EJT-oo-q7N">
+                                        <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                    </segue>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="dL6-MO-lWk"/>
@@ -253,10 +273,17 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="yPJ-5a-oTw"/>
                     </view>
+                    <navigationItem key="navigationItem" id="ngS-EY-l2v">
+                        <barButtonItem key="leftBarButtonItem" title="Zurück" id="4mo-Od-h1V">
+                            <connections>
+                                <action selector="back:" destination="EtJ-7U-zk8" id="NRV-xz-1S8"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sII-mM-OHO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5177" y="1567"/>
+            <point key="canvasLocation" x="6119.1999999999998" y="1566.5024630541873"/>
         </scene>
         <!--Attic Controller-->
         <scene sceneID="LvB-mi-M1d">
@@ -268,10 +295,17 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="I6a-Vu-wQ2"/>
                     </view>
+                    <navigationItem key="navigationItem" id="Fur-Z8-0ZA">
+                        <barButtonItem key="leftBarButtonItem" title="Zurück" id="Mwm-jA-chs">
+                            <connections>
+                                <action selector="back:" destination="5u8-at-sl0" id="bu9-wr-gEQ"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ujZ-am-zsP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="8946.3999999999996" y="134.48275862068965"/>
+            <point key="canvasLocation" x="9888.7999999999993" y="134.48275862068965"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="eCY-NH-Ueg">
@@ -362,6 +396,42 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3Ar-Qx-XjZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="6119.1999999999998" y="840.88669950738915"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="30Q-hr-cON">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="J2l-v4-ggH" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="8sf-W1-vZm">
+                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="5u8-at-sl0" kind="relationship" relationship="rootViewController" id="SmW-0v-1Rq"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2FO-MI-wfo" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="8946.3999999999996" y="134.48275862068965"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="xTm-xb-MVb">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="DJ3-ro-Tuz" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="wgI-O4-AJ1">
+                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="EtJ-7U-zk8" kind="relationship" relationship="rootViewController" id="XAF-Y1-h33"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lZE-be-Css" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5176.8000000000002" y="1566.5024630541873"/>
         </scene>
     </scenes>
     <resources>
