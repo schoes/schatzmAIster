@@ -9,8 +9,12 @@
 import Foundation
 import UIKit
 
-class AdditionalRoomzController:UIViewController{
-    
+class AdditionalRoomzController : UIViewController{
+    @IBOutlet weak var containerView: UIView!
+    override func viewDidLoad() {
+        super.viewDidLoad()
+    }
+
     @IBAction func roomzSelected(_ sender: UIBarButtonItem) {
     }
     

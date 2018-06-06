@@ -145,13 +145,6 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="clr-HL-EiE">
-                                <rect key="frame" x="312" y="329" width="49" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <connections>
-                                    <action selector="atticSelected:forEvent:" destination="Hdh-rw-Rx2" eventType="valueChanged" id="gcO-TW-9lL"/>
-                                </connections>
-                            </switch>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Keller ?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aQM-Wr-8fp">
                                 <rect key="frame" x="16" y="368" width="56" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -159,13 +152,6 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="6ZO-AN-IDx">
-                                <rect key="frame" x="312" y="363" width="49" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <connections>
-                                    <action selector="cellarSelected:forEvent:" destination="Hdh-rw-Rx2" eventType="valueChanged" id="qjR-ZB-cEe"/>
-                                </connections>
-                            </switch>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Garage ?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Sb-PJ-yXX">
                                 <rect key="frame" x="16" y="396" width="69" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -173,20 +159,21 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="apr-vg-2qn">
-                                <rect key="frame" x="312" y="402" width="49" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <connections>
-                                    <action selector="garageSelected:forEvent:" destination="Hdh-rw-Rx2" eventType="valueChanged" id="LVJ-yD-yKY"/>
-                                </connections>
-                            </switch>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Estrich ?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KHe-mi-QJO">
-                                <rect key="frame" x="16" y="334" width="66" height="26"/>
+                                <rect key="frame" x="19" y="334" width="66" height="26"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HHX-Wa-cED">
+                                <rect key="frame" x="157" y="363" width="60" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Erfassen"/>
+                                <connections>
+                                    <segue destination="StJ-dP-RKO" kind="presentation" modalPresentationStyle="pageSheet" id="e0e-nX-u3V"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="dL6-MO-lWk"/>
@@ -225,22 +212,36 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hNn-sj-KWd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="7466.3999999999996" y="840.88669950738915"/>
+            <point key="canvasLocation" x="8408.7999999999993" y="840.88669950738915"/>
         </scene>
-        <!--Cellar Controller-->
+        <!--Keller-->
         <scene sceneID="gPO-0m-3Cm">
             <objects>
                 <viewController id="bbf-ZN-Xy2" customClass="CellarController" customModule="SchatzmAIster" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="y0j-hE-4TT">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lfl-dp-hQg">
+                                <rect key="frame" x="67" y="175" width="240" height="415"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="xPu-yx-0LR"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Keller" id="jT6-lW-spC">
+                        <barButtonItem key="leftBarButtonItem" title="Zurück" id="yhh-4h-nOm">
+                            <connections>
+                                <action selector="back:" destination="bbf-ZN-Xy2" id="ih6-3T-snr"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Tyc-OK-s6a" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6119.1999999999998" y="840.88669950738915"/>
+            <point key="canvasLocation" x="7061.6000000000004" y="840.88669950738915"/>
         </scene>
         <!--Garage Controller-->
         <scene sceneID="QV3-kk-Q29">
@@ -343,6 +344,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tSg-ep-22Q" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1977" y="1032"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Rg1-oc-xtO">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="StJ-dP-RKO" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="8ib-ET-lur">
+                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="bbf-ZN-Xy2" kind="relationship" relationship="rootViewController" id="e3R-PY-pGP"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3Ar-Qx-XjZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="6119.1999999999998" y="840.88669950738915"/>
         </scene>
     </scenes>
     <resources>
