@@ -16,7 +16,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
- Clarifai.sharedInstance().start(apiKey:"ad5ac7437dd44a78badb27a092f716d5")
+ Clarifai.sharedInstance().start(apiKey:"e0f547b813fe48429fcb03775396e44d")
         return true
     }
 
