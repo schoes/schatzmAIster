@@ -24,6 +24,7 @@
 		37ECA3E320BD3846004CB7B4 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 37ECA3DE20BD3845004CB7B4 /* libsqlite3.tbd */; };
 		37ECA3E420BD3846004CB7B4 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37ECA3DF20BD3845004CB7B4 /* UIKit.framework */; };
 		37ECA3E720BD4A60004CB7B4 /* Clarifai_Apple_SDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 37ECA3D320BD37E9004CB7B4 /* Clarifai_Apple_SDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		D0313C7520C7D9C3004A3CCC /* PredictionEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0313C7420C7D9C3004A3CCC /* PredictionEngine.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -59,6 +60,7 @@
 		37ECA3DD20BD3845004CB7B4 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		37ECA3DE20BD3845004CB7B4 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 		37ECA3DF20BD3845004CB7B4 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		D0313C7420C7D9C3004A3CCC /* PredictionEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PredictionEngine.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +112,7 @@
 				3765E0C820C7CF3200D02AD3 /* RoomzController.swift */,
 				3765E0CA20C7CF4D00D02AD3 /* AdditionalRoomzController.swift */,
 				3765E0CC20C7CF5800D02AD3 /* FinishController.swift */,
+				D0313C7420C7D9C3004A3CCC /* PredictionEngine.swift */,
 			);
 			path = SchatzmAIster;
 			sourceTree = "<group>";
@@ -222,6 +225,7 @@
 				3765E0CB20C7CF4D00D02AD3 /* AdditionalRoomzController.swift in Sources */,
 				3765E0C920C7CF3200D02AD3 /* RoomzController.swift in Sources */,
 				3765E0CD20C7CF5800D02AD3 /* FinishController.swift in Sources */,
+				D0313C7520C7D9C3004A3CCC /* PredictionEngine.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -366,7 +370,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 28WXQA64V7;
+				DEVELOPMENT_TEAM = 85NMCC9F4Q;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Clarifai",
@@ -389,7 +393,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 28WXQA64V7;
+				DEVELOPMENT_TEAM = 85NMCC9F4Q;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Clarifai",
