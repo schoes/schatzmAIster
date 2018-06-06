@@ -7,9 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3765E0C320C7CEDD00D02AD3 /* Roomz.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3765E0C220C7CEDD00D02AD3 /* Roomz.storyboard */; };
-		3765E0C520C7CEF800D02AD3 /* Additional_Roomz.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3765E0C420C7CEF800D02AD3 /* Additional_Roomz.storyboard */; };
-		3765E0C720C7CF2700D02AD3 /* Finish.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3765E0C620C7CF2700D02AD3 /* Finish.storyboard */; };
 		3765E0C920C7CF3200D02AD3 /* RoomzController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3765E0C820C7CF3200D02AD3 /* RoomzController.swift */; };
 		3765E0CB20C7CF4D00D02AD3 /* AdditionalRoomzController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3765E0CA20C7CF4D00D02AD3 /* AdditionalRoomzController.swift */; };
 		3765E0CD20C7CF5800D02AD3 /* FinishController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3765E0CC20C7CF5800D02AD3 /* FinishController.swift */; };
@@ -44,9 +41,6 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		3765E0C220C7CEDD00D02AD3 /* Roomz.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Roomz.storyboard; sourceTree = "<group>"; };
-		3765E0C420C7CEF800D02AD3 /* Additional_Roomz.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Additional_Roomz.storyboard; sourceTree = "<group>"; };
-		3765E0C620C7CF2700D02AD3 /* Finish.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Finish.storyboard; sourceTree = "<group>"; };
 		3765E0C820C7CF3200D02AD3 /* RoomzController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomzController.swift; sourceTree = "<group>"; };
 		3765E0CA20C7CF4D00D02AD3 /* AdditionalRoomzController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdditionalRoomzController.swift; sourceTree = "<group>"; };
 		3765E0CC20C7CF5800D02AD3 /* FinishController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinishController.swift; sourceTree = "<group>"; };
@@ -113,9 +107,6 @@
 				37DBD28320BC30520041E266 /* Assets.xcassets */,
 				37DBD28520BC30520041E266 /* LaunchScreen.storyboard */,
 				37DBD28820BC30520041E266 /* Info.plist */,
-				3765E0C220C7CEDD00D02AD3 /* Roomz.storyboard */,
-				3765E0C420C7CEF800D02AD3 /* Additional_Roomz.storyboard */,
-				3765E0C620C7CF2700D02AD3 /* Finish.storyboard */,
 				3765E0C820C7CF3200D02AD3 /* RoomzController.swift */,
 				3765E0CA20C7CF4D00D02AD3 /* AdditionalRoomzController.swift */,
 				3765E0CC20C7CF5800D02AD3 /* FinishController.swift */,
@@ -199,9 +190,6 @@
 			files = (
 				37DBD28720BC30520041E266 /* LaunchScreen.storyboard in Resources */,
 				37DBD28420BC30520041E266 /* Assets.xcassets in Resources */,
-				3765E0C320C7CEDD00D02AD3 /* Roomz.storyboard in Resources */,
-				3765E0C720C7CF2700D02AD3 /* Finish.storyboard in Resources */,
-				3765E0C520C7CEF800D02AD3 /* Additional_Roomz.storyboard in Resources */,
 				37DBD28220BC304E0041E266 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
