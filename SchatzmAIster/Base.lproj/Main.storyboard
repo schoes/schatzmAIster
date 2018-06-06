@@ -46,7 +46,7 @@
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
-                        <outlet property="videoViewLayer" destination="i2Q-ev-hIE" id="wu1-Xq-IUr"/>
+                        <outlet property="previewView" destination="i2Q-ev-hIE" id="wUj-2P-cVB"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fRm-E0-0a5" userLabel="First Responder" sceneMemberID="firstResponder"/>

@@ -15,7 +15,7 @@ var videoPreviewLayer: AVCaptureVideoPreviewLayer?
 
 class RoomzController:UIViewController {
     
-    @IBOutlet var previewLayer: UIView!
+    @IBOutlet var previewView: UIView!
     
     var captureSession: AVCaptureSession?
     var videoPreviewLayer: AVCaptureVideoPreviewLayer?
@@ -51,7 +51,7 @@ class RoomzController:UIViewController {
             videoPreviewLayer = AVCaptureVideoPreviewLayer(session: captureSession!)
             videoPreviewLayer?.videoGravity = AVLayerVideoGravity.resizeAspectFill
             videoPreviewLayer?.frame = view.layer.bounds
-            previewLayer.layer.addSublayer(videoPreviewLayer!)
+            previewView.layer.addSublayer(videoPreviewLayer!)
             
             //start video capture
             captureSession?.startRunning()
