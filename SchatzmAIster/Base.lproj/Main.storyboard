@@ -26,7 +26,7 @@
             </objects>
             <point key="canvasLocation" x="1076" y="133.5832083958021"/>
         </scene>
-        <!--Roomz Controller-->
+        <!--???-->
         <scene sceneID="xqT-dd-MCd">
             <objects>
                 <viewController id="hfF-cT-adU" customClass="RoomzController" customModule="SchatzmAIster" customModuleProvider="target" sceneMemberID="viewController">
@@ -37,6 +37,13 @@
                         <viewLayoutGuide key="safeArea" id="cYZ-X9-WCo"/>
                     </view>
                     <toolbarItems/>
+                    <navigationItem key="navigationItem" title="???" id="Dsd-OL-35o">
+                        <barButtonItem key="rightBarButtonItem" title="Fninish" id="r6m-3u-Rq3">
+                            <connections>
+                                <segue destination="Hdh-rw-Rx2" kind="show" id="i8H-Rt-chh"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="videoViewLayer" destination="i2Q-ev-hIE" id="wu1-Xq-IUr"/>
@@ -46,7 +53,7 @@
             </objects>
             <point key="canvasLocation" x="1807.2" y="135.38230884557723"/>
         </scene>
-        <!--Additional Roomz Controller-->
+        <!--Andere Räume-->
         <scene sceneID="oNt-u8-OkY">
             <objects>
                 <viewController id="Hdh-rw-Rx2" customClass="AdditionalRoomzController" customModule="SchatzmAIster" customModuleProvider="target" sceneMemberID="viewController">
@@ -56,6 +63,9 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="dL6-MO-lWk"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Andere Räume" id="nfQ-9t-2SR">
+                        <barButtonItem key="rightBarButtonItem" title="Fertig" id="7bR-cI-Q7O"/>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ces-pX-nJ9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
