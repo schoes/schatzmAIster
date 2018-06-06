@@ -28,6 +28,7 @@
 		37ECA3E420BD3846004CB7B4 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37ECA3DF20BD3845004CB7B4 /* UIKit.framework */; };
 		37ECA3E720BD4A60004CB7B4 /* Clarifai_Apple_SDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 37ECA3D320BD37E9004CB7B4 /* Clarifai_Apple_SDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		D0313C7520C7D9C3004A3CCC /* PredictionEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0313C7420C7D9C3004A3CCC /* PredictionEngine.swift */; };
+		D0C33B5720C80A4400289D7F /* UIPredictionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0C33B5620C80A4400289D7F /* UIPredictionView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -67,6 +68,7 @@
 		37ECA3DE20BD3845004CB7B4 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 		37ECA3DF20BD3845004CB7B4 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		D0313C7420C7D9C3004A3CCC /* PredictionEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PredictionEngine.swift; sourceTree = "<group>"; };
+		D0C33B5620C80A4400289D7F /* UIPredictionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIPredictionView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,6 +124,7 @@
 				3765E0D020C7FF9200D02AD3 /* CellarController.swift */,
 				3765E0D220C8002500D02AD3 /* GarageController.swift */,
 				D0313C7420C7D9C3004A3CCC /* PredictionEngine.swift */,
+				D0C33B5620C80A4400289D7F /* UIPredictionView.swift */,
 			);
 			path = SchatzmAIster;
 			sourceTree = "<group>";
@@ -235,6 +238,7 @@
 				3765E0CF20C7FEDF00D02AD3 /* AtticController.swift in Sources */,
 				3765E0D320C8002500D02AD3 /* GarageController.swift in Sources */,
 				3765E0C920C7CF3200D02AD3 /* RoomzController.swift in Sources */,
+				D0C33B5720C80A4400289D7F /* UIPredictionView.swift in Sources */,
 				3765E0CD20C7CF5800D02AD3 /* FinishController.swift in Sources */,
 				3765E0D120C7FF9200D02AD3 /* CellarController.swift in Sources */,
 				D0313C7520C7D9C3004A3CCC /* PredictionEngine.swift in Sources */,
