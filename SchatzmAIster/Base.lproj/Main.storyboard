@@ -35,6 +35,9 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="cYZ-X9-WCo"/>
                     </view>
+                    <connections>
+                        <outlet property="previewLayer" destination="i2Q-ev-hIE" id="Xw7-IN-7QT"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fRm-E0-0a5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
