@@ -14,17 +14,15 @@ import Clarifai_Apple_SDK
 var captureSession: AVCaptureSession?
 var videoPreviewLayer: AVCaptureVideoPreviewLayer?
 
-class RoomzController:UIViewController {
+
+
+
+class RoomzController: UIViewController {
     @IBAction func roomScanned(_ sender: UIBarButtonItem) {
         navigationController?.popViewController(animated: true)
         
         dismiss(animated: true, completion: nil)
     }
-    
-    @IBOutlet var previewView: UIView!
-
-class RoomzController: UIViewController {
-    
     @IBOutlet var previewView: UIView!
     @IBOutlet weak var roomTypeNavigationItem: UINavigationItem!
     @IBOutlet weak var predictionStackView: UIStackView!
@@ -105,3 +103,4 @@ class RoomzController: UIViewController {
         }
     }
 }
+
