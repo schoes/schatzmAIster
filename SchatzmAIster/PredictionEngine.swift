@@ -8,7 +8,7 @@
 
 import Clarifai_Apple_SDK
 
-class PreditionEngine {
+class PredictionEngine {
     
     typealias PredictionHandler = ([Output]?, Error?) -> Void
     

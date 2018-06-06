@@ -9,21 +9,28 @@
 import Foundation
 import UIKit
 import AVFoundation
+import Clarifai_Apple_SDK
 
 var captureSession: AVCaptureSession?
 var videoPreviewLayer: AVCaptureVideoPreviewLayer?
 
-class RoomzController:UIViewController {
+class RoomzController: UIViewController {
     
     @IBOutlet var previewView: UIView!
     @IBOutlet weak var roomTypeNavigationItem: UINavigationItem!
+    @IBOutlet weak var predictionStackView: UIStackView!
     
     var captureSession: AVCaptureSession?
     var videoPreviewLayer: AVCaptureVideoPreviewLayer?
+    var predictionEngine: PredictionEngine?
+    var concepts: [Concept] = []
     
     override func viewDidLoad() {
         roomTypeNavigationItem.title = "Wo bist du ??"
         super.viewDidLoad()
+        let livingRoom = UIImage(named: "living-room")
+        
+        predictionEngine = PredictionEngine.init(model: Clarifai.sharedInstance().generalModel, handler: handlePredictions)
         
         guard let captureDevice = AVCaptureDevice.default(for: AVMediaType.video) else {
             fatalError("No video device found")
@@ -39,14 +46,11 @@ class RoomzController:UIViewController {
             // Set the input devcie on the capture session
             captureSession?.addInput(input)
             
-            
+            predictionEngine?.predict(image: Image(image: livingRoom))
             
             // Initialize a AVCaptureMetadataOutput object and set it as the input device
             let captureMetadataOutput = AVCaptureMetadataOutput()
             captureSession?.addOutput(captureMetadataOutput)
-            
-            
-            
             
             //Initialise the video preview layer and add it as a sublayer to the viewPreview view's layer
             videoPreviewLayer = AVCaptureVideoPreviewLayer(session: captureSession!)
@@ -67,4 +71,29 @@ class RoomzController:UIViewController {
         
     }
     
+    func handlePredictions(outputs: [Output]?, error: Error?) {
+        self.concepts.removeAll()
+        for output in outputs! {
+            self.concepts.append(contentsOf: output.dataAsset.concepts!)
+        }
+        clearStackView()
+        buildStackView(concepts: self.concepts)
+    }
+    
+    func clearStackView() {
+        for subview in self.predictionStackView.subviews {
+            self.predictionStackView.removeArrangedSubview(subview)
+            subview.removeFromSuperview()
+        }
+    }
+    
+    func buildStackView(concepts: [Concept]) {
+        for concept in concepts {
+            let subview: UIPredictionStackView = UIPredictionStackView()
+            NSLog(concept.name)
+            subview.objectLabel.text = concept.name
+            subview.predictionLabel.text = String(concept.score)
+            self.predictionStackView.addArrangedSubview(subview)
+        }
+    }
 }

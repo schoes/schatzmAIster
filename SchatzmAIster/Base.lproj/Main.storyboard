@@ -55,6 +55,12 @@
                     <view key="view" contentMode="scaleToFill" id="i2Q-ev-hIE">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="a1l-AQ-lgL">
+                                <rect key="frame" x="16" y="417" width="204" height="206"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </stackView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="cYZ-X9-WCo"/>
                     </view>
@@ -68,6 +74,7 @@
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="predictionStackView" destination="a1l-AQ-lgL" id="3Rw-B8-oC1"/>
                         <outlet property="previewView" destination="i2Q-ev-hIE" id="wUj-2P-cVB"/>
                         <outlet property="roomTypeNavigationItem" destination="Dsd-OL-35o" id="Oo7-0x-d6f"/>
                     </connections>
