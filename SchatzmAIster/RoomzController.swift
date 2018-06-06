@@ -14,15 +14,18 @@ var captureSession: AVCaptureSession?
 var videoPreviewLayer: AVCaptureVideoPreviewLayer?
 
 class RoomzController:UIViewController {
+    @IBAction func roomScanned(_ sender: UIBarButtonItem) {
+        navigationController?.popViewController(animated: true)
+        
+        dismiss(animated: true, completion: nil)
+    }
     
     @IBOutlet var previewView: UIView!
-    @IBOutlet weak var roomTypeNavigationItem: UINavigationItem!
     
     var captureSession: AVCaptureSession?
     var videoPreviewLayer: AVCaptureVideoPreviewLayer?
     
     override func viewDidLoad() {
-        roomTypeNavigationItem.title = "Wo bist du ??"
         super.viewDidLoad()
         
         guard let captureDevice = AVCaptureDevice.default(for: AVMediaType.video) else {
