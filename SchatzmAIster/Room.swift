@@ -37,37 +37,60 @@ class Room {
     func addContent(newThing: Thing) {
         contents.append(newThing)
         NotificationCenter.default.post(name: Notification.Name.contentAdded, object: nil, userInfo: ["thing": newThing])
-        determineType()
+        type = determineType()
         determineName()
     }
     
     func changeName(newName: String) {
+        NSLog("Changing name to %s", newName)
         if (name != newName) {
             name = newName
+            NSLog(newName)
             NotificationCenter.default.post(name: Notification.Name.nameChanged, object: nil, userInfo: ["name": newName])
         }
     }
     
     func determineName() {
+        NSLog("Determining name: %d", String(self.type.hashValue))
         switch type {
+        case .attic:
+            changeName(newName: "Estrich")
+        case .bathroom:
+            changeName(newName: "Badzimmer")
         case .bedroom:
             changeName(newName: "Schlafzimmer")
+        case .cellar:
+            changeName(newName: "Keller")
         case .diningroom:
             changeName(newName: "Esszimmer")
+        case .garage:
+            changeName(newName: "Garage")
         case .kitchen:
             changeName(newName: "Küche")
         case .livingroom:
             changeName(newName: "Wohnzimmer")
+        case .office:
+            changeName(newName: "Büro")
         default:
             changeName(newName: "???")
         }
     }
     
-    func determineType() {
-        if (labels.contains("bedroom")) {
-            type = RoomType.bedroom
+    func determineType() -> RoomType {
+        if (labels.contains("bedroom") || hasThing(name: "bed")) {
+            return .bedroom
         }
-        
+        if (hasThing(name: "sofa") || hasThing("seat")) {
+            return .livingroom
+        }
+        if (hasThing(name: "table")) {
+            return .diningroom
+        }
+        return .unknown
+    }
+    
+    func hasThing(name: String) -> Bool {
+        return contents.contains(where: {(thing: Thing) in return thing.name == name})
     }
     
     func value() -> Double {
