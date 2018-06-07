@@ -7,3 +7,8 @@
 //
 
 import Foundation
+class RommManager{
+    func addRomm(room:Room){
+        
+    }
+}

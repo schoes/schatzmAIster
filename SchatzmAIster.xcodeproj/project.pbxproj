@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3721CB2120C908E300ECD0D9 /* RoomManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3721CB2020C908E300ECD0D9 /* RoomManager.swift */; };
 		3765E0C920C7CF3200D02AD3 /* RoomzController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3765E0C820C7CF3200D02AD3 /* RoomzController.swift */; };
 		3765E0CB20C7CF4D00D02AD3 /* AdditionalRoomzController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3765E0CA20C7CF4D00D02AD3 /* AdditionalRoomzController.swift */; };
 		3765E0CD20C7CF5800D02AD3 /* FinishController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3765E0CC20C7CF5800D02AD3 /* FinishController.swift */; };
@@ -46,6 +47,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		3721CB2020C908E300ECD0D9 /* RoomManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomManager.swift; sourceTree = "<group>"; };
 		3765E0C820C7CF3200D02AD3 /* RoomzController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomzController.swift; sourceTree = "<group>"; };
 		3765E0CA20C7CF4D00D02AD3 /* AdditionalRoomzController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdditionalRoomzController.swift; sourceTree = "<group>"; };
 		3765E0CC20C7CF5800D02AD3 /* FinishController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinishController.swift; sourceTree = "<group>"; };
@@ -125,6 +127,7 @@
 				3765E0D220C8002500D02AD3 /* GarageController.swift */,
 				D0313C7420C7D9C3004A3CCC /* PredictionEngine.swift */,
 				D0C33B5620C80A4400289D7F /* UIPredictionView.swift */,
+				3721CB2020C908E300ECD0D9 /* RoomManager.swift */,
 			);
 			path = SchatzmAIster;
 			sourceTree = "<group>";
@@ -241,6 +244,7 @@
 				D0C33B5720C80A4400289D7F /* UIPredictionView.swift in Sources */,
 				3765E0CD20C7CF5800D02AD3 /* FinishController.swift in Sources */,
 				3765E0D120C7FF9200D02AD3 /* CellarController.swift in Sources */,
+				3721CB2120C908E300ECD0D9 /* RoomManager.swift in Sources */,
 				D0313C7520C7D9C3004A3CCC /* PredictionEngine.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
