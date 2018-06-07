@@ -36,12 +36,7 @@ class AdditionalRoomzController : UIViewController{
 
     override func viewDidLoad() {
         super.viewDidLoad()
-       
-        let height = view?.frame.size.height
-        
-        let bubble = Bubble(frame: CGRect(x:50,y: height! ,width: 100 ,height: 100), text: "Hi")
-
-        view?.addSubview(bubble)
+    
         
         vbQuestion.layer.borderWidth = 1
         vbQuestion.layer.cornerRadius = 10

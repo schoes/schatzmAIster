@@ -12,6 +12,7 @@
 		3721CB2520C916DF00ECD0D9 /* RoomStandard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3721CB2420C916DF00ECD0D9 /* RoomStandard.swift */; };
 		3721CB2720C92CDE00ECD0D9 /* YourRoomzController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3721CB2620C92CDE00ECD0D9 /* YourRoomzController.swift */; };
 		3721CB2B20C9557C00ECD0D9 /* RoomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3721CB2A20C9557C00ECD0D9 /* RoomTableViewCell.swift */; };
+		3721CB2D20C96F7B00ECD0D9 /* YourRoomzTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3721CB2C20C96F7B00ECD0D9 /* YourRoomzTableViewController.swift */; };
 		3765E0C920C7CF3200D02AD3 /* RoomzController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3765E0C820C7CF3200D02AD3 /* RoomzController.swift */; };
 		3765E0CB20C7CF4D00D02AD3 /* AdditionalRoomzController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3765E0CA20C7CF4D00D02AD3 /* AdditionalRoomzController.swift */; };
 		3765E0CD20C7CF5800D02AD3 /* FinishController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3765E0CC20C7CF5800D02AD3 /* FinishController.swift */; };
@@ -61,6 +62,7 @@
 		3721CB2420C916DF00ECD0D9 /* RoomStandard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomStandard.swift; sourceTree = "<group>"; };
 		3721CB2620C92CDE00ECD0D9 /* YourRoomzController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YourRoomzController.swift; sourceTree = "<group>"; };
 		3721CB2A20C9557C00ECD0D9 /* RoomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomTableViewCell.swift; sourceTree = "<group>"; };
+		3721CB2C20C96F7B00ECD0D9 /* YourRoomzTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YourRoomzTableViewController.swift; sourceTree = "<group>"; };
 		3765E0C820C7CF3200D02AD3 /* RoomzController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomzController.swift; sourceTree = "<group>"; };
 		3765E0CA20C7CF4D00D02AD3 /* AdditionalRoomzController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdditionalRoomzController.swift; sourceTree = "<group>"; };
 		3765E0CC20C7CF5800D02AD3 /* FinishController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinishController.swift; sourceTree = "<group>"; };
@@ -155,6 +157,7 @@
 				3721CB2620C92CDE00ECD0D9 /* YourRoomzController.swift */,
 				87185A7620C925D500C4C664 /* Thing.swift */,
 				3721CB2A20C9557C00ECD0D9 /* RoomTableViewCell.swift */,
+				3721CB2C20C96F7B00ECD0D9 /* YourRoomzTableViewController.swift */,
 			);
 			path = SchatzmAIster;
 			sourceTree = "<group>";
@@ -276,6 +279,7 @@
 				3765E0D120C7FF9200D02AD3 /* CellarController.swift in Sources */,
 				3721CB2120C908E300ECD0D9 /* RoomManager.swift in Sources */,
 				D0313C7520C7D9C3004A3CCC /* PredictionEngine.swift in Sources */,
+				3721CB2D20C96F7B00ECD0D9 /* YourRoomzTableViewController.swift in Sources */,
 				87185A7720C925D500C4C664 /* Thing.swift in Sources */,
 				D0C33B5920C8194700289D7F /* Room.swift in Sources */,
 				3721CB2B20C9557C00ECD0D9 /* RoomTableViewCell.swift in Sources */,
@@ -426,7 +430,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 85NMCC9F4Q;
+				DEVELOPMENT_TEAM = 28WXQA64V7;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Clarifai",
@@ -436,7 +440,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = ch.mobi.cdays.schatzmaister.CloudmAIster;
+				PRODUCT_BUNDLE_IDENTIFIER = ch.mobi.cdays.schatzmaister.SchatzmAIster;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -449,7 +453,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 85NMCC9F4Q;
+				DEVELOPMENT_TEAM = 28WXQA64V7;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Clarifai",
@@ -459,7 +463,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = ch.mobi.cdays.schatzmaister.CloudmAIster;
+				PRODUCT_BUNDLE_IDENTIFIER = ch.mobi.cdays.schatzmaister.SchatzmAIster;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

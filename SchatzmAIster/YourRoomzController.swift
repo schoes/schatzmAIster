@@ -19,6 +19,11 @@ class YourRoomzController:UIViewController,UITableViewDataSource, UITableViewDel
     override func viewDidLoad() {
             self.allRooms = RoomManager.sharedInstance.getRoomz()
         self.scannedRoomz.isHidden = !self.allRooms.isEmpty
+    
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        self.allRooms = RoomManager.sharedInstance.getRoomz()
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -29,14 +34,23 @@ class YourRoomzController:UIViewController,UITableViewDataSource, UITableViewDel
         let cell = scannedRoomz.dequeueReusableCell(withIdentifier: "rooms") as! RoomTableViewCell
         
         cell.roomNameLabel.text = self.allRooms[indexPath.item].name
-        
+        cell.roomTypeImage.image = UIImage(named: getRoomTypeImage(room: allRooms[indexPath.item]))
         
         return cell
-        
+    }
+    
+     func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
     }
     
     func getRoomTypeImage(room:Room) -> String {
-        
-   return "Test"
+        switch room.type {
+        case .livingroom:
+            return "living_room_label"
+        case .diningroom:
+            return "esszimmer_label"
+        default:
+            return "office_label"
+        }
     }
 }
