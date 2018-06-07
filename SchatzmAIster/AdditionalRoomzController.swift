@@ -13,6 +13,8 @@ class AdditionalRoomzController : UIViewController{
     
     let roomManager = RoomManager.sharedInstance
     
+    @IBOutlet weak var createGarageBtn: UIButton!
+    @IBOutlet weak var createCellarBtn: UIButton!
     @IBOutlet weak var createAtticBtn: UIButton!
     @IBOutlet weak var vbQuestion: UILabel!
     @IBOutlet weak var containerView: UIView!
@@ -23,6 +25,13 @@ class AdditionalRoomzController : UIViewController{
         if roomManager.hasAdditionalRoom(roomName: "Attic") {
             createAtticBtn.setTitle("ändern", for: .normal)
         }
+        if roomManager.hasAdditionalRoom(roomName: "Cellar") {
+            createCellarBtn.setTitle("ändern", for: .normal)
+        }
+        if roomManager.hasAdditionalRoom(roomName: "Garage") {
+            createGarageBtn.setTitle("ändern", for: .normal)
+        }
+        
     }
 
     override func viewDidLoad() {
