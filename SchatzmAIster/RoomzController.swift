@@ -53,7 +53,7 @@ class RoomzController: UIViewController {
     
     @objc func addedContent(notification: Notification) -> Void {
         if let content = notification.userInfo!["thing"] as! Thing? {
-            NSLog("Showing Bubble with content of: %s", content.name)
+            NSLog("Showing Bubble with content of" + content.name)
         }
     }
     
