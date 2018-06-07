@@ -9,7 +9,10 @@
 import UIKit
 
 class RoomTableViewCell: UITableViewCell {
-
+    @IBOutlet weak var tableCellImg: UIImageView!
+    
+    @IBOutlet weak var cellView: UIView!
+    @IBOutlet weak var tableCellLabel: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
