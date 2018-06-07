@@ -10,22 +10,22 @@ import Foundation
 import UIKit
 
 class AdditionalRoomzController : UIViewController{
+    
+    let roomManager = RoomManager.sharedInstance
+    
+    @IBOutlet weak var createAtticBtn: UIButton!
     @IBOutlet weak var vbQuestion: UILabel!
     @IBOutlet weak var containerView: UIView!
     override func viewDidLoad() {
         super.viewDidLoad()
+       
+        if roomManager.hasAdditionalRoom(roomName: "attic") {
+            createAtticBtn.setTitle("ändern", for: .normal)
+        }
         vbQuestion.layer.borderWidth = 1
         vbQuestion.layer.cornerRadius = 10
         vbQuestion.layer.borderColor = UIColor.black.cgColor
+        
     }
 
-    @IBAction func roomzSelected(_ sender: UIBarButtonItem) {
-    }
-    
-    @IBAction func atticSelected(_ sender: UISwitch, forEvent event: UIEvent) {
-    }
-    @IBAction func cellarSelected(_ sender: UISwitch, forEvent event: UIEvent) {
-    }
-    @IBAction func garageSelected(_ sender: UISwitch, forEvent event: UIEvent) {
-    }
 }
