@@ -10,8 +10,6 @@ import UIKit
 
 class RoomTableViewCell: UITableViewCell {
 
-    @IBOutlet weak var roomTypeImage: UIImageView!
-    @IBOutlet weak var roomNameLabel: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
