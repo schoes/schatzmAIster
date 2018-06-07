@@ -23,13 +23,14 @@ class AdditionalRoomzController : UIViewController{
         super.viewDidAppear(animated)
         
         if roomManager.hasAdditionalRoom(roomName: "Attic") {
-            createAtticBtn.setTitle("ändern", for: .normal)
+            createAtticBtn.setTitle("✓  ändern", for: .normal)
         }
         if roomManager.hasAdditionalRoom(roomName: "Cellar") {
-            createCellarBtn.setTitle("ändern", for: .normal)
+            createCellarBtn.setTitle("✓  ändern", for: .normal)
         }
         if roomManager.hasAdditionalRoom(roomName: "Garage") {
-            createGarageBtn.setTitle("ändern", for: .normal)
+            
+            createGarageBtn.setTitle("✓  ändern", for: .normal)
         }
         
     }
