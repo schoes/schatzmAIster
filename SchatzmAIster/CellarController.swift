@@ -14,10 +14,10 @@ class CellarController: UIViewController {
 
     @IBAction func fullCellarClicked() {
 
-        if !roomManager.hasAdditionalRoom(roomName: "Cellar") {
+        if !roomManager.hasAdditionalRoom(roomName: "Keller") {
             let room = roomManager.addAdditionalRoom()
             room.setStandard(standard: RoomStandard.luxury)
-            room.name = "Cellar"
+            room.name = "Keller"
         }
 
         back(self)
@@ -25,19 +25,19 @@ class CellarController: UIViewController {
     }
     @IBAction func halfFullCellarClicked() {
 
-        if !roomManager.hasAdditionalRoom(roomName: "Cellar") {
+        if !roomManager.hasAdditionalRoom(roomName: "Keller") {
             let room = roomManager.addAdditionalRoom()
             room.setStandard(standard: RoomStandard.normal)
-            room.name = "Cellar"
+            room.name = "Keller"
         }
 
         back(self)
     }
     @IBAction func emptyCellarClicked() {
-        if !roomManager.hasAdditionalRoom(roomName: "Cellar") {
+        if !roomManager.hasAdditionalRoom(roomName: "Keller") {
             let room = roomManager.addAdditionalRoom()
             room.setStandard(standard: RoomStandard.minimal)
-            room.name = "Cellar"
+            room.name = "Keller"
         }
 
         back(self)

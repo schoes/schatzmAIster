@@ -14,10 +14,10 @@ class AtticController: UIViewController {
     var roomManager = RoomManager.sharedInstance
 
     @IBAction func emptyAtticSelected() {
-        if !roomManager.hasAdditionalRoom(roomName: "Attic") {
+        if !roomManager.hasAdditionalRoom(roomName: "Estrich") {
             let room = roomManager.addAdditionalRoom()
             room.setStandard(standard: RoomStandard.minimal)
-            room.name = "Attic"
+            room.name = "Estrich"
         }
 
         back(self)
@@ -25,20 +25,20 @@ class AtticController: UIViewController {
 
     @IBAction func halfFullAtticSelected() {
 
-        if !roomManager.hasAdditionalRoom(roomName: "Attic") {
+        if !roomManager.hasAdditionalRoom(roomName: "Estrich") {
             let room = roomManager.addAdditionalRoom()
             room.setStandard(standard: RoomStandard.normal)
-            room.name = "Attic"
+            room.name = "Estrich"
         }
         back(self)
     }
 
     @IBAction func fullAtticSelected() {
-        if !roomManager.hasAdditionalRoom(roomName: "Attic") {
+        if !roomManager.hasAdditionalRoom(roomName: "Estrich") {
 
             let room = roomManager.addAdditionalRoom()
             room.setStandard(standard: RoomStandard.luxury)
-            room.name = "Attic"
+            room.name = "Estrich"
         }
         back(self)
     }

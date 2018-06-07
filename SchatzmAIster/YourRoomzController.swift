@@ -24,6 +24,18 @@ class YourRoomzController:UIViewController, UITableViewDelegate, UITableViewData
         return 100
     }
     
+    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        return true
+    }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        if (editingStyle == UITableViewCellEditingStyle.delete) {
+            RoomManager.sharedInstance.deleteRoom(index: indexPath.row)
+            scannedRoomz.reloadData()
+            // handle delete (by removing the data from your array and updating the tableview)
+        }
+    }
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "customCell") as! RoomTableViewCell
         
@@ -33,7 +45,6 @@ class YourRoomzController:UIViewController, UITableViewDelegate, UITableViewData
         //cell.animalImage.image = UIImage(named: RoomManager.sharedInstance.getRoomz()[indexPath.row])
         cell.tableCellImg.image = UIImage(named: RoomManager.sharedInstance.getRoomz()[indexPath.row].name)
         //cell.animalImage.layer.cornerRadius = cell.animalImage.frame.height / 2
-        
         return cell
     }
     

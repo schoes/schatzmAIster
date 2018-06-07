@@ -8,17 +8,20 @@
 
 import Foundation
 class RoomManager{
-    static let sharedInstance = RoomManager()
+    static var sharedInstance = RoomManager()
     var roomz:[Room] = []
-    var additionalRoomz:[AdditionalRoom] = []
     func addRoom()->Room{
         let room = Room()
         self.roomz.append(room);
         return room
     }
+    
+    func deleteRoom(index: Int) {
+        roomz.remove(at: index)
+    }
 
     func hasAdditionalRoom(roomName: String) -> Bool {
-        for room in additionalRoomz {
+        for room in roomz {
             NSLog("name %s", room.name)
             if room.name == roomName {
                 return true
@@ -34,11 +37,8 @@ class RoomManager{
     
     func addAdditionalRoom()->AdditionalRoom{
         let additionalRoom = AdditionalRoom()
-        self.additionalRoomz.append(additionalRoom)
+        self.roomz.append(additionalRoom)
         return additionalRoom
     }
     
-    func getAdditionalRoomz()->[AdditionalRoom]{
-        return self.additionalRoomz
-    }
 }
