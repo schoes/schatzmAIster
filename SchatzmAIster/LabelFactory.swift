@@ -10,7 +10,7 @@ import Clarifai_Apple_SDK
 
 class LabelFactory {
     
-    let label = ["luxury", "contemporary", "bedroom", "dining room"]
+    let label = ["luxury", "contemporary", "bedroom", "dining room", "living room", "kitchen"]
     
     init() {
         
