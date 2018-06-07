@@ -17,11 +17,11 @@ class AdditionalRoomzController : UIViewController{
     @IBOutlet weak var createCellarBtn: UIButton!
     @IBOutlet weak var createAtticBtn: UIButton!
     @IBOutlet weak var vbQuestion: UILabel!
-    @IBOutlet weak var containerView: UIView!
-
+    
+    
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-
+        
         if roomManager.hasAdditionalRoom(roomName: "Attic") {
             createAtticBtn.setTitle("ändern", for: .normal)
         }
@@ -37,7 +37,12 @@ class AdditionalRoomzController : UIViewController{
     override func viewDidLoad() {
         super.viewDidLoad()
        
+        let height = view?.frame.size.height
+        
+        let bubble = Bubble(frame: CGRect(x:50,y: height! ,width: 100 ,height: 100), text: "Hi")
 
+        view?.addSubview(bubble)
+        
         vbQuestion.layer.borderWidth = 1
         vbQuestion.layer.cornerRadius = 10
         vbQuestion.layer.borderColor = UIColor.black.cgColor

@@ -80,6 +80,7 @@ class PredictionHandler {
             let things = self.thingFactory.extractThings(concepts: output.dataAsset.concepts!)
             let labels = self.labelFactory.extractLabels(concepts: output.dataAsset.concepts!)
             room.acceptContents(things: things)
+            room.acceptLabels(newLabels: labels)
         }
     }
 }

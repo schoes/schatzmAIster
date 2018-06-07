@@ -10,10 +10,12 @@ import Clarifai_Apple_SDK
 
 class Room {
     var contents: [Thing] = []
-    var name = "A Room"
+    var labels: Set<String> = []
+    var name = "???"
+    var type = RoomType.unknown
     
     func acceptContents(things: [Thing]) {
-        things.map { acceptContent(thing: $0) }
+        things.forEach { acceptContent(thing: $0) }
     }
     
     func acceptContent(thing: Thing) {
@@ -22,15 +24,56 @@ class Room {
         }
     }
     
+    func acceptLabels(newLabels: [String]) {
+        let base = labels.count
+        
+        newLabels.forEach { labels.insert($0) }
+        
+        if (base < labels.count) {
+            determineName()
+        }
+    }
+    
     func addContent(newThing: Thing) {
         contents.append(newThing)
         NotificationCenter.default.post(name: Notification.Name.contentAdded, object: nil, userInfo: ["thing": newThing])
+        determineType()
+        determineName()
     }
     
-    func value()->Double{
+    func changeName(newName: String) {
+        if (name != newName) {
+            name = newName
+            NotificationCenter.default.post(name: Notification.Name.nameChanged, object: nil, userInfo: ["name": newName])
+        }
+    }
+    
+    func determineName() {
+        switch type {
+        case .bedroom:
+            changeName(newName: "Schlafzimmer")
+        case .diningroom:
+            changeName(newName: "Esszimmer")
+        case .kitchen:
+            changeName(newName: "Küche")
+        case .livingroom:
+            changeName(newName: "Wohnzimmer")
+        default:
+            changeName(newName: "???")
+        }
+    }
+    
+    func determineType() {
+        if (labels.contains("bedroom")) {
+            type = RoomType.bedroom
+        }
+        
+    }
+    
+    func value() -> Double {
         return Double(1.0)
 }
-    func standard()->RoomStandard{
+    func standard() -> RoomStandard {
         return RoomStandard.minimal
     }
 }

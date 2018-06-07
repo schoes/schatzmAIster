@@ -167,6 +167,7 @@
                         <outlet property="createCellarBtn" destination="HHX-Wa-cED" id="ZnV-1h-z97"/>
                         <outlet property="createGarageBtn" destination="2DR-WL-f3z" id="WZ2-uo-Jfk"/>
                         <outlet property="vbQuestion" destination="c3c-Wt-b8j" id="E8m-0Z-qZl"/>
+                        <outlet property="view" destination="vZA-b4-cvD" id="O77-Jm-NJZ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ces-pX-nJ9" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -629,7 +630,6 @@
         <image name="man-with-suitcase-icon" width="256" height="256"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="syf-Sg-zF9"/>
         <segue reference="2tj-3F-sN4"/>
     </inferredMetricsTieBreakers>
 </document>
