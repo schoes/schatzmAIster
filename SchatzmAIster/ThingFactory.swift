@@ -10,11 +10,11 @@ import Clarifai_Apple_SDK
 
 class ThingFactory {
     
-    let names = ["chair", "easy chair", "seat", "sofa", "table", "rug", "lamp", "vase", "cabinet", "shelf", "bed"]
+    let names = ["chair", "easy chair", "seat", "sofa", "table", "rug", "lamp", "vase", "cabinet", "shelf", "bed", "desk", "computer", "laptop"]
     
-    let livingRoomLuxury  : [String : Int] = ["chair" :  596, "easy chair" :  800, "seat" :  580, "sofa" : 3000, "table" : 3800, "rug" :    0, "lamp" :  276, "vase" :    0, "cabinet" :  516, "shelf" :   40, "bed" : 3800]
-    let livingRoomNormal  : [String : Int] = ["chair" :  372, "easy chair" :  500, "seat" :  362, "sofa" : 1875, "table" : 2375, "rug" :    0, "lamp" :  172, "vase" :    0, "cabinet" :  322, "shelf" :  100, "bed" : 2375]
-    let livingRoomMinimal : [String : Int] = ["chair" :  149, "easy chair" :  200, "seat" :  145, "sofa" :  750, "table" :  950, "rug" :    0, "lamp" :   69, "vase" :    0, "cabinet" :  129, "shelf" :  160, "bed" :  950]
+    let livingRoomLuxury  : [String : Int] = ["chair" :  596, "easy chair" :  800, "seat" :  580, "sofa" : 3000, "table" : 3800, "rug" :    0, "lamp" :  276, "vase" :    0, "cabinet" :  516, "shelf" :   40, "bed" : 3800, "desk" :  596, "computer" : 2000, "laptop" : 2000]
+    let livingRoomNormal  : [String : Int] = ["chair" :  372, "easy chair" :  500, "seat" :  362, "sofa" : 1875, "table" : 2375, "rug" :    0, "lamp" :  172, "vase" :    0, "cabinet" :  322, "shelf" :  100, "bed" : 2375, "desk" :  372, "computer" : 1250, "laptop" : 1250]
+    let livingRoomMinimal : [String : Int] = ["chair" :  149, "easy chair" :  200, "seat" :  145, "sofa" :  750, "table" :  950, "rug" :    0, "lamp" :   69, "vase" :    0, "cabinet" :  129, "shelf" :  160, "bed" :  950, "desk" :  149, "computer" :  500, "laptop" :  500]
     
     init() {
         
