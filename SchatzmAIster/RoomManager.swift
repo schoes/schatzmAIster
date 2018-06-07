@@ -16,6 +16,17 @@ class RoomManager{
         self.roomz.append(room);
         return room
     }
+
+    func hasAdditionalRoom(roomName: String) -> Bool {
+        for room in additionalRoomz {
+            NSLog("name %s", room.name)
+            if room.name == roomName {
+                return true
+            }
+        }
+        return false;
+    }
+
     
     func getRoomz()->[Room]{
         return self.roomz;

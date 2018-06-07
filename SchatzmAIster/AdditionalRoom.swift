@@ -9,9 +9,13 @@
 import Foundation
 
 class AdditionalRoom:Room {
+
+    var standard = RoomStandard.minimal
     
-    
-    
+    func setStandard(standard:RoomStandard) {
+        self.standard = standard;
+    }
+
     override func value() -> Double {
         
         if(standard() == RoomStandard.minimal){

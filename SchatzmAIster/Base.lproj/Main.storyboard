@@ -220,6 +220,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="createAtticBtn" destination="aqr-NJ-G5F" id="fsx-0i-eUp"/>
                         <outlet property="vbQuestion" destination="c3c-Wt-b8j" id="E8m-0Z-qZl"/>
                     </connections>
                 </viewController>
