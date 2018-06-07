@@ -242,11 +242,22 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lfl-dp-hQg">
-                                <rect key="frame" x="67" y="175" width="240" height="415"/>
+                            <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eZj-Dr-x4b">
+                                <rect key="frame" x="77" y="185" width="240" height="377"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                            </containerView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="empty_cellar" translatesAutoresizingMaskIntoConstraints="NO" id="Kvt-fn-AcL">
+                                <rect key="frame" x="77" y="185" width="240" height="128"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            </view>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="halffull_cellar" translatesAutoresizingMaskIntoConstraints="NO" id="K8B-dT-hBa">
+                                <rect key="frame" x="77" y="310" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="full_cellar2" translatesAutoresizingMaskIntoConstraints="NO" id="5Ud-o9-GDP">
+                                <rect key="frame" x="77" y="434" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="xPu-yx-0LR"/>
@@ -488,10 +499,13 @@
     </scenes>
     <resources>
         <image name="empty attic" width="1920" height="1280"/>
+        <image name="empty_cellar" width="461" height="614"/>
         <image name="empty_garage" width="4128" height="2322"/>
         <image name="full_attic" width="700" height="432"/>
+        <image name="full_cellar2" width="640" height="480"/>
         <image name="full_garage" width="570" height="380"/>
         <image name="halffull_attic" width="986" height="555"/>
+        <image name="halffull_cellar" width="996" height="562"/>
         <image name="halffull_garage" width="850" height="430"/>
         <image name="man-with-suitcase-icon" width="256" height="256"/>
     </resources>
