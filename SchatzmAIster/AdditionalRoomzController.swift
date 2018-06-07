@@ -16,12 +16,19 @@ class AdditionalRoomzController : UIViewController{
     @IBOutlet weak var createAtticBtn: UIButton!
     @IBOutlet weak var vbQuestion: UILabel!
     @IBOutlet weak var containerView: UIView!
+
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+
+        if roomManager.hasAdditionalRoom(roomName: "Attic") {
+            createAtticBtn.setTitle("ändern", for: .normal)
+        }
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
        
-        if roomManager.hasAdditionalRoom(roomName: "attic") {
-            createAtticBtn.setTitle("ändern", for: .normal)
-        }
+
         vbQuestion.layer.borderWidth = 1
         vbQuestion.layer.cornerRadius = 10
         vbQuestion.layer.borderColor = UIColor.black.cgColor
