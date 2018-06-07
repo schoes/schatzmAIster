@@ -11,12 +11,8 @@ class Room {
     var contents: [String] = []
     var name = "A Room"
     
-    func acceptContents(concepts: [Concept]) {
-        contents.removeAll()
-        for concept in concepts {
-            NSLog(concept.name + "   " + String(concept.score))
-            contents.append(concept.name)
-        }
+    func acceptContents(things: [Thing]) {
+        
     }
     
     func value()->Double{

@@ -10,7 +10,9 @@ import Clarifai_Apple_SDK
 
 class ThingFactory {
     
-    let names = ["Chair", "Easy Chair"]
+    let names = ["chair", "easy chair", "seat", "sofa", "table", "rug", "lamp", "vase", "cabinet", "shelf", "bed"]
+    
+    // luxury, contemporary, bedroom, dining room, 
     
     init() {
         

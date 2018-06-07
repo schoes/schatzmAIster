@@ -68,6 +68,7 @@ class AIExtractor : NSObject, AVCapturePhotoCaptureDelegate {
 class PredictionHandler {
     
     let room: Room
+    let thingFactory = ThingFactory.init()
     
     init(room: Room) {
         self.room = room
@@ -75,8 +76,8 @@ class PredictionHandler {
     
     func handlePredictions(outputs: [Output]?, error: Error?) {
         for output in outputs! {
-            
-            room.acceptContents(concepts: output.dataAsset.concepts!)
+            let things = self.thingFactory.extractThings(concepts: output.dataAsset.concepts!)
+            room.acceptContents(things: things)
         }
     }
 }
