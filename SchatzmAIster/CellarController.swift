@@ -9,12 +9,39 @@
 import Foundation
 import UIKit
 class CellarController: UIViewController {
-    
+
+    let roomManager = RoomManager.sharedInstance
+
     @IBAction func fullCellarClicked() {
+
+        if !roomManager.hasAdditionalRoom(roomName: "Cellar") {
+            let room = roomManager.addAdditionalRoom()
+            room.setStandard(standard: RoomStandard.luxury)
+            room.name = "Cellar"
+        }
+
+        back(self)
+
     }
     @IBAction func halfFullCellarClicked() {
+
+        if !roomManager.hasAdditionalRoom(roomName: "Cellar") {
+            let room = roomManager.addAdditionalRoom()
+            room.setStandard(standard: RoomStandard.normal)
+            room.name = "Cellar"
+        }
+
+        back(self)
     }
     @IBAction func emptyCellarClicked() {
+        if !roomManager.hasAdditionalRoom(roomName: "Cellar") {
+            let room = roomManager.addAdditionalRoom()
+            room.setStandard(standard: RoomStandard.minimal)
+            room.name = "Cellar"
+        }
+
+        back(self)
+
     }
     @IBAction func back(_ sender: Any) {
         self.navigationController?.popViewController(animated: true)

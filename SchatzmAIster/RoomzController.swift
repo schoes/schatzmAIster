@@ -18,7 +18,6 @@ class RoomzController: UIViewController {
     
     @IBAction func roomScanned(_ sender: UIBarButtonItem) {
         navigationController?.popViewController(animated: true)
-        
         dismiss(animated: true, completion: nil)
     }
     
