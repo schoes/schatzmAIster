@@ -11,9 +11,13 @@ import Foundation
 class Thing : NSObject {
     
     let name : String
+    let label : String
+    let probability : Float
     
-    init(name: String) {
+    init(name: String, label: String, probability: Float) {
         self.name = name
+        self.label = label
+        self.probability = probability
         super.init()
     }
     

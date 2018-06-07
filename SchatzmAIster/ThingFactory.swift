@@ -10,7 +10,9 @@ import Clarifai_Apple_SDK
 
 class ThingFactory {
     
-    let names = ["chair", "easy chair", "seat", "sofa", "table", "rug", "lamp", "vase", "cabinet", "shelf", "bed", "desk", "computer", "laptop"]
+    let names : [String : String] = ["chair" : "Stuhl", "easy chair" : "Sessel", "seat" : "Sitz", "sofa": "Sofa", "table": "Tisch", "rug": "Teppich", "lamp": "Lampe", "vase": "Vase", "cabinet": "Schrank", "shelf": "Tablar", "bed": "Bett", "desk": "Schreibtisch", "computer": "Computer", "laptop": "Laptop"]
+    
+    
     
     let livingRoomLuxury  : [String : Int] = ["chair" :  596, "easy chair" :  800, "seat" :  580, "sofa" : 3000, "table" : 3800, "rug" :    0, "lamp" :  276, "vase" :    0, "cabinet" :  516, "shelf" :   40, "bed" : 3800, "desk" :  596, "computer" : 2000, "laptop" : 2000]
     let livingRoomNormal  : [String : Int] = ["chair" :  372, "easy chair" :  500, "seat" :  362, "sofa" : 1875, "table" : 2375, "rug" :    0, "lamp" :  172, "vase" :    0, "cabinet" :  322, "shelf" :  100, "bed" : 2375, "desk" :  372, "computer" : 1250, "laptop" : 1250]
@@ -21,9 +23,9 @@ class ThingFactory {
     }
     
     func extractThings(concepts: [Concept]) -> [Thing] {
-        let things = concepts.filter({self.names.contains($0.name)}).map({
+        let things = concepts.filter({self.names.keys.contains($0.name)}).map({
             (concept: Concept) -> Thing in
-            return Thing.init(name: concept.name)
+            return Thing.init(name: concept.name, label: self.names[concept.name]!, probability: concept.score)
             })
         return things
     }
