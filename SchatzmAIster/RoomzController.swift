@@ -28,7 +28,7 @@ class RoomzController: UIViewController {
     var videoPreviewLayer: AVCaptureVideoPreviewLayer?
     var room: Room?
     var extractor: AIExtractor?
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -53,6 +53,11 @@ class RoomzController: UIViewController {
     
     @objc func addedContent(notification: Notification) -> Void {
         if let content = notification.userInfo!["thing"] as! Thing? {
+            let height = view?.frame.size.height
+
+            let bubble = Bubble(frame: CGRect(x:50,y: height! ,width: 100 ,height: 100), text: content.name)
+            view?.addSubview(bubble)
+
             NSLog("Showing Bubble with content of" + content.name)
         }
     }
