@@ -20,6 +20,10 @@ class YourRoomzController:UIViewController, UITableViewDelegate, UITableViewData
         return RoomManager.sharedInstance.getRoomz().count
     }
     
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 100
+    }
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "customCell") as! RoomTableViewCell
         
@@ -27,7 +31,7 @@ class YourRoomzController:UIViewController, UITableViewDelegate, UITableViewData
         
         cell.tableCellLabel.text = RoomManager.sharedInstance.getRoomz()[indexPath.row].name
         //cell.animalImage.image = UIImage(named: RoomManager.sharedInstance.getRoomz()[indexPath.row])
-        cell.tableCellImg.image = UIImage(named: "keller")
+        cell.tableCellImg.image = UIImage(named: RoomManager.sharedInstance.getRoomz()[indexPath.row].name)
         //cell.animalImage.layer.cornerRadius = cell.animalImage.frame.height / 2
         
         return cell
