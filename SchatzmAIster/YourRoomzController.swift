@@ -10,6 +10,12 @@ import Foundation
 import UIKit
 
 
-class YourRoomzController:UITableViewController{
+class YourRoomzController:UIViewController{
+    var allRooms : [Room] = []
+    @IBOutlet weak var scannedRoomz: UITableView!
     
+    override func viewDidLoad() {
+        self.allRooms = RoomManager.sharedInstance.getRoomz()
+        
+    }
 }
