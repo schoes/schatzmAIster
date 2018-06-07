@@ -42,8 +42,9 @@ class Room {
     }
     
     func changeName(newName: String) {
-        NSLog("Changing name to %s", newName)
+        NSLog("Changing name to " + newName)
         if (name != newName) {
+            NSLog("Really changing name to " + newName)
             name = newName
             NSLog(newName)
             NotificationCenter.default.post(name: Notification.Name.nameChanged, object: nil, userInfo: ["name": newName])
