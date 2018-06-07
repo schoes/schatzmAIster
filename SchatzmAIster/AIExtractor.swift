@@ -75,8 +75,13 @@ class PredictionHandler {
     
     func handlePredictions(outputs: [Output]?, error: Error?) {
         for output in outputs! {
+            
             room.acceptContents(concepts: output.dataAsset.concepts!)
         }
     }
-    
+}
+
+extension NSNotification.Name {
+    static let nameChanged = Notification.Name("RoomNameChanged")
+    static let contentAdded = Notification.Name("RoomContentAdded")
 }
