@@ -10,9 +10,13 @@ import Foundation
 import UIKit
 
 class AdditionalRoomzController : UIViewController{
+    @IBOutlet weak var vbQuestion: UILabel!
     @IBOutlet weak var containerView: UIView!
     override func viewDidLoad() {
         super.viewDidLoad()
+        vbQuestion.layer.borderWidth = 1
+        vbQuestion.layer.cornerRadius = 10
+        vbQuestion.layer.borderColor = UIColor.black.cgColor
     }
 
     @IBAction func roomzSelected(_ sender: UIBarButtonItem) {
