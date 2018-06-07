@@ -10,12 +10,10 @@ import Clarifai_Apple_SDK
 
 class PredictionEngine {
     
-    typealias PredictionHandler = ([Output]?, Error?) -> Void
-    
     let model: Model;
     let predictionHandler: PredictionHandler
     
-    init(model: Model, handler: @escaping PredictionHandler) {
+    init(model: Model, handler: PredictionHandler) {
         self.model = model
         self.predictionHandler = handler
     }
@@ -24,7 +22,7 @@ class PredictionEngine {
         let dataAsset = DataAsset.init(image: image)
         let input = Input.init(dataAsset: dataAsset)
         let inputs = [input]
-        self.model.predict(inputs, completionHandler: predictionHandler)
+        self.model.predict(inputs, completionHandler: predictionHandler.handlePredictions)
         
     }
 }
