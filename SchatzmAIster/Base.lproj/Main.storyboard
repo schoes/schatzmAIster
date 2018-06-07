@@ -329,25 +329,30 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="o44-sn-7dJ">
-                                <rect key="frame" x="67" y="228" width="240" height="377"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4RR-HM-1Py">
+                                <rect key="frame" x="59" y="152" width="256" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" backgroundImage="empty attic"/>
                                 <connections>
-                                    <segue destination="C3U-uS-lf2" kind="embed" id="pgf-zv-hh6"/>
+                                    <action selector="emptyAtticSelected" destination="5u8-at-sl0" eventType="touchUpInside" id="QHM-dO-6Rr"/>
                                 </connections>
-                            </containerView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="empty attic" translatesAutoresizingMaskIntoConstraints="NO" id="f76-v5-hQ1">
-                                <rect key="frame" x="67" y="228" width="240" height="128"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vlP-cZ-keB">
+                                <rect key="frame" x="59" y="342" width="256" height="128"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="halffull_attic" highlightedImage="halffull_attic" translatesAutoresizingMaskIntoConstraints="NO" id="vKR-01-zj9">
-                                <rect key="frame" x="67" y="353" width="240" height="128"/>
+                                <state key="normal" backgroundImage="halffull_attic"/>
+                                <connections>
+                                    <action selector="halfFullAtticSelected" destination="5u8-at-sl0" eventType="touchUpInside" id="if3-LW-hLT"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Akg-yw-Ld5">
+                                <rect key="frame" x="59" y="542" width="256" height="128"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="full_attic" translatesAutoresizingMaskIntoConstraints="NO" id="PVV-jL-jwj">
-                                <rect key="frame" x="67" y="477" width="240" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
+                                <state key="normal" backgroundImage="full_attic"/>
+                                <connections>
+                                    <action selector="fullAtticSelected" destination="5u8-at-sl0" eventType="touchUpInside" id="WDe-vV-ES5"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="I6a-Vu-wQ2"/>
@@ -495,7 +500,7 @@
             <objects>
                 <viewController id="C3U-uS-lf2" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="YEl-tG-4ko">
-                        <rect key="frame" x="0.0" y="0.0" width="240" height="377"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="lh0-Pk-i5z"/>

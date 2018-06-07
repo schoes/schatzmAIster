@@ -11,6 +11,12 @@ import UIKit
 
 class AtticController: UIViewController{
     
+    @IBAction func emptyAtticSelected() {
+    }
+    @IBAction func halfFullAtticSelected() {
+    }
+    @IBAction func fullAtticSelected() {
+    }
     @IBAction func back(_ sender: Any) {
         self.navigationController?.popViewController(animated: true)
         dismiss(animated: true, completion: nil)

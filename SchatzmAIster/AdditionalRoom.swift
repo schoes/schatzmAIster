@@ -10,13 +10,15 @@ import Foundation
 
 class AdditionalRoom:Room {
     
+    
+    
     override func value() -> Double {
         
         if(standard() == RoomStandard.minimal){
             return Double(1.0)
         }
         
-        else if(standard() == RoomStandard.minimal){
+        else if(standard() == RoomStandard.normal){
             return Double(2.0)
         }
         else{
