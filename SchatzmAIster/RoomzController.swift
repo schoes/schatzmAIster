@@ -53,12 +53,12 @@ class RoomzController: UIViewController {
     
     @objc func addedContent(notification: Notification) -> Void {
         if let content = notification.userInfo!["thing"] as! Thing? {
-            let height = view?.frame.size.height
+            let height = view!.frame.size.height
             let width = view!.frame.size.width
 
             let x = Int(CGFloat(arc4random_uniform(UInt32(width))))
 
-            let bubble = Bubble(frame: CGRect(x:x,y: Int(height!)-50 ,width: 100 ,height: 100), text: content.name)
+            let bubble = Bubble(frame: CGRect(x:x,y: Int(height)-100 ,width: 100 ,height: 100), text: content.name)
             view?.addSubview(bubble)
 
             NSLog("Showing Bubble with content of" + content.name)
