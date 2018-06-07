@@ -7,12 +7,24 @@
 //
 
 import Clarifai_Apple_SDK
+
 class Room {
-    var contents: [String] = []
+    var contents: [Thing] = []
     var name = "A Room"
     
     func acceptContents(things: [Thing]) {
-        
+        things.map { acceptContent(thing: $0) }
+    }
+    
+    func acceptContent(thing: Thing) {
+        if (!contents.contains(thing)) {
+            addContent(newThing: thing)
+        }
+    }
+    
+    func addContent(newThing: Thing) {
+        contents.append(newThing)
+        NotificationCenter.default.post(name: Notification.Name.contentAdded, object: nil, userInfo: ["thing": newThing])
     }
     
     func value()->Double{
