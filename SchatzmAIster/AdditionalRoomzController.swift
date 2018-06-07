@@ -36,9 +36,7 @@ class AdditionalRoomzController : UIViewController{
 
     override func viewDidLoad() {
         super.viewDidLoad()
-       
-        let height = view?.frame.size.height
-        
+               
         vbQuestion.layer.borderWidth = 1
         vbQuestion.layer.cornerRadius = 10
         vbQuestion.layer.borderColor = UIColor.black.cgColor
