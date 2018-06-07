@@ -69,6 +69,7 @@ class PredictionHandler {
     
     let room: Room
     let thingFactory = ThingFactory.init()
+    let labelFactory = LabelFactory.init()
     
     init(room: Room) {
         self.room = room
@@ -77,6 +78,7 @@ class PredictionHandler {
     func handlePredictions(outputs: [Output]?, error: Error?) {
         for output in outputs! {
             let things = self.thingFactory.extractThings(concepts: output.dataAsset.concepts!)
+            let labels = self.labelFactory.extractLabels(concepts: output.dataAsset.concepts!)
             room.acceptContents(things: things)
         }
     }

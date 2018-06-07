@@ -16,7 +16,7 @@ class LabelFactory {
         
     }
     
-    func extractThings(concepts: [Concept]) -> [String]{
+    func extractLabels(concepts: [Concept]) -> [String]{
         let labels = concepts.filter({self.label.contains($0.name)}).map({
             (concept: Concept) -> String in
             return concept.name
