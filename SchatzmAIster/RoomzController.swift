@@ -14,10 +14,7 @@ import Clarifai_Apple_SDK
 var captureSession: AVCaptureSession?
 var videoPreviewLayer: AVCaptureVideoPreviewLayer?
 
-
-
-
-class RoomzController: UIViewController {
+class RoomzController: UIViewController, AVCapturePhotoCaptureDelegate {
     @IBAction func roomScanned(_ sender: UIBarButtonItem) {
         navigationController?.popViewController(animated: true)
         
@@ -30,12 +27,15 @@ class RoomzController: UIViewController {
     var captureSession: AVCaptureSession?
     var videoPreviewLayer: AVCaptureVideoPreviewLayer?
     var predictionEngine: PredictionEngine?
-    var concepts: [Concept] = []
+    var room: Room?
     
     override func viewDidLoad() {
-        super.viewDidLoad()
         let livingRoom = UIImage(named: "living-room")
         
+        roomTypeNavigationItem.title = "Wo bist du ??"
+        super.viewDidLoad()
+        
+        room = Room.init()
         predictionEngine = PredictionEngine.init(model: Clarifai.sharedInstance().generalModel, handler: handlePredictions)
         
         guard let captureDevice = AVCaptureDevice.default(for: AVMediaType.video) else {
@@ -48,58 +48,61 @@ class RoomzController: UIViewController {
             
             // Initialize the captureSession object
             captureSession = AVCaptureSession()
-            
             // Set the input devcie on the capture session
-            captureSession?.addInput(input)
-            
-            predictionEngine?.predict(image: Image(image: livingRoom))
+            captureSession!.addInput(input)
             
             // Initialize a AVCaptureMetadataOutput object and set it as the input device
             let captureMetadataOutput = AVCaptureMetadataOutput()
-            captureSession?.addOutput(captureMetadataOutput)
+            captureSession!.addOutput(captureMetadataOutput)
+            
+            let photoOutput = AVCapturePhotoOutput()
+            captureSession!.addOutput(photoOutput)
+            let photoSettings = AVCapturePhotoSettings()
+            photoSettings.flashMode = .off
+            
             
             //Initialise the video preview layer and add it as a sublayer to the viewPreview view's layer
             videoPreviewLayer = AVCaptureVideoPreviewLayer(session: captureSession!)
-            videoPreviewLayer?.videoGravity = AVLayerVideoGravity.resizeAspectFill
-            videoPreviewLayer?.frame = view.layer.bounds
+            videoPreviewLayer!.videoGravity = AVLayerVideoGravity.resizeAspectFill
+            videoPreviewLayer!.frame = view.layer.bounds
+            
             previewView.layer.addSublayer(videoPreviewLayer!)
             
             //start video capture
-            captureSession?.startRunning()
-        
-        
+            captureSession!.startRunning()
+            
+            photoOutput.capturePhoto(with: photoSettings, delegate: self)
+            //predict(image: livingRoom!)
         } catch {
             //If any error occurs, simply print it out
             print(error)
             return
         }
-        
-        
+    }
+    
+    func predict(image: UIImage) {
+        predictionEngine?.predict(image: Image(image: image))
     }
     
     func handlePredictions(outputs: [Output]?, error: Error?) {
-        self.concepts.removeAll()
         for output in outputs! {
-            self.concepts.append(contentsOf: output.dataAsset.concepts!)
-        }
-        clearStackView()
-        buildStackView(concepts: self.concepts)
-    }
-    
-    func clearStackView() {
-        for subview in self.predictionStackView.subviews {
-            self.predictionStackView.removeArrangedSubview(subview)
-            subview.removeFromSuperview()
+            room!.acceptContents(concepts: output.dataAsset.concepts!)
         }
     }
     
-    func buildStackView(concepts: [Concept]) {
-        for concept in concepts {
-            let subview: UIPredictionStackView = UIPredictionStackView()
-            NSLog(concept.name)
-            subview.objectLabel.text = concept.name
-            subview.predictionLabel.text = String(concept.score)
-            self.predictionStackView.addArrangedSubview(subview)
+    internal func photoOutput(_ output: AVCapturePhotoOutput, didFinishProcessingPhoto photo: AVCapturePhoto, error: Error?) {
+            
+        guard error == nil else {
+            print("Failed Capturing Picture: \(String(describing: error!.localizedDescription))")
+            return
+        }
+        NSLog("No Error")
+        if let imageData = photo.fileDataRepresentation() {
+            NSLog("Image Data")
+            if let image = UIImage(data: imageData) {
+                NSLog("Predicting...")
+                predict(image: image)
+            }
         }
     }
 }
