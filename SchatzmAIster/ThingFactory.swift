@@ -12,17 +12,47 @@ class ThingFactory {
     
     let names = ["chair", "easy chair", "seat", "sofa", "table", "rug", "lamp", "vase", "cabinet", "shelf", "bed"]
     
-    // luxury, contemporary, bedroom, dining room,
+    let livingRoomLuxury  : [String : Int] = ["chair" :  596, "easy chair" :  800, "seat" :  580, "sofa" : 3000, "table" : 3800, "rug" :    0, "lamp" :  276, "vase" :    0, "cabinet" :  516, "shelf" :   40, "bed" : 3800]
+    let livingRoomNormal  : [String : Int] = ["chair" :  372, "easy chair" :  500, "seat" :  362, "sofa" : 1875, "table" : 2375, "rug" :    0, "lamp" :  172, "vase" :    0, "cabinet" :  322, "shelf" :  100, "bed" : 2375]
+    let livingRoomMinimal : [String : Int] = ["chair" :  149, "easy chair" :  200, "seat" :  145, "sofa" :  750, "table" :  950, "rug" :    0, "lamp" :   69, "vase" :    0, "cabinet" :  129, "shelf" :  160, "bed" :  950]
     
     init() {
         
     }
     
-    func extractThings(concepts: [Concept]) -> [Thing]{
+    func extractThings(concepts: [Concept]) -> [Thing] {
         let things = concepts.filter({self.names.contains($0.name)}).map({
             (concept: Concept) -> Thing in
             return Thing.init(name: concept.name)
             })
         return things
+    }
+    
+    func calculatePrice(things: [Thing], roomStandard: RoomStandard, roomType: RoomType) -> Int {
+        let totalPrice = things.reduce(0){
+            price, thing in
+            return price + priceOfThing(thing: thing, roomStandard: roomStandard, roomType: roomType)
+        }
+        return totalPrice;
+    }
+    
+    func priceOfThing(thing: Thing, roomStandard: RoomStandard, roomType: RoomType) -> Int {
+        //switch roomType {
+        //case RoomType.livingroom:
+            return priceInLivingRoom(thing: thing, roomStandard: roomStandard)
+        //default:
+        //    return 0
+        //}
+    }
+    
+    func priceInLivingRoom(thing: Thing, roomStandard: RoomStandard) -> Int {
+        switch roomStandard {
+        case RoomStandard.luxury:
+            return livingRoomLuxury[thing.name]!
+        case RoomStandard.normal:
+            return livingRoomNormal[thing.name]!
+        case RoomStandard.minimal:
+            return livingRoomMinimal[thing.name]!
+        }
     }
 }

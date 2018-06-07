@@ -23,12 +23,13 @@ class RoomzController: UIViewController {
     
     @IBOutlet var previewView: UIView!
     @IBOutlet weak var predictionStackView: UIStackView!
-   
+    @IBOutlet weak var roomName: UINavigationItem!
+    
     var captureSession: AVCaptureSession?
     var videoPreviewLayer: AVCaptureVideoPreviewLayer?
     var room: Room?
     var extractor: AIExtractor?
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -51,15 +52,30 @@ class RoomzController: UIViewController {
         extractor?.start()
     }
     
-    @objc func addedContent(notification: Notification) -> Void {
+    @objc func addedContent(notification: Notification) {
         if let content = notification.userInfo!["thing"] as! Thing? {
+            let height = view!.frame.size.height
+            let width = view!.frame.size.width
+
+            let x = Int(CGFloat(arc4random_uniform(UInt32(width))))
+
+            let bubble = Bubble(frame: CGRect(x:x,y: Int(height)-100 ,width: 100 ,height: 100), text: content.name)
+            view?.addSubview(bubble)
+
             NSLog("Showing Bubble with content of" + content.name)
+        }
+    }
+    
+    @objc func changedName(notification: Notification) {
+        if let name = notification.userInfo!["name"] as! String? {
+            roomName.title = name
         }
     }
     
     func setupAIExtraction() {
         extractor = AIExtractor.init(captureSession: captureSession!, room: room!)
         NotificationCenter.default.addObserver(self, selector: #selector(addedContent(notification:)), name: NSNotification.Name.contentAdded, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(changedName(notification:)), name: NSNotification.Name.nameChanged, object: nil)
     }
     
     func setupRoom() {

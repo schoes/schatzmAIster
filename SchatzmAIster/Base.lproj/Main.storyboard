@@ -76,6 +76,7 @@
                     <connections>
                         <outlet property="predictionStackView" destination="a1l-AQ-lgL" id="3Rw-B8-oC1"/>
                         <outlet property="previewView" destination="i2Q-ev-hIE" id="wUj-2P-cVB"/>
+                        <outlet property="roomName" destination="NBS-8H-G4P" id="PHp-dw-ryb"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fRm-E0-0a5" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -622,5 +623,7 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="bCa-aZ-ojb"/>
+        <segue reference="syf-Sg-zF9"/>
+        <segue reference="2tj-3F-sN4"/>
     </inferredMetricsTieBreakers>
 </document>
