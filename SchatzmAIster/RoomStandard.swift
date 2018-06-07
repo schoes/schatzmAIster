@@ -11,3 +11,15 @@ enum RoomStandard{
     case normal
     case luxury
 }
+
+enum RoomType {
+    case bedroom
+    case livingroom
+    case kitchen
+    case diningroom
+    case bathroom
+    case cellar
+    case attic
+    case garage
+    case unknown
+}
