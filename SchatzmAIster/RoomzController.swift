@@ -31,11 +31,9 @@ class RoomzController: UIViewController, AVCapturePhotoCaptureDelegate {
     
     override func viewDidLoad() {
         let livingRoom = UIImage(named: "living-room")
-        
-        roomTypeNavigationItem.title = "Wo bist du ??"
+       
         super.viewDidLoad()
-        
-        room = Room.init()
+        self.room =  RoomManager.sharedInstance.addRoom();
         predictionEngine = PredictionEngine.init(model: Clarifai.sharedInstance().generalModel, handler: handlePredictions)
         
         guard let captureDevice = AVCaptureDevice.default(for: AVMediaType.video) else {
