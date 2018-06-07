@@ -6,11 +6,14 @@
 //  Copyright © 2018 Sven Schoeni. All rights reserved.
 //
 
-class Thing {
+import Foundation
+
+class Thing : NSObject {
     
     let name : String
     
     init(name: String) {
         self.name = name
+        super.init()
     }
 }

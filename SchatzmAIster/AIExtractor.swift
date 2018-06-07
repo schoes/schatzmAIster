@@ -79,5 +79,9 @@ class PredictionHandler {
             room.acceptContents(concepts: output.dataAsset.concepts!)
         }
     }
-    
+}
+
+extension NSNotification.Name {
+    static let nameChanged = Notification.Name("RoomNameChanged")
+    static let contentAdded = Notification.Name("RoomContentAdded")
 }

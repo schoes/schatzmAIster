@@ -15,11 +15,13 @@ var captureSession: AVCaptureSession?
 var videoPreviewLayer: AVCaptureVideoPreviewLayer?
 
 class RoomzController: UIViewController {
+    
     @IBAction func roomScanned(_ sender: UIBarButtonItem) {
         navigationController?.popViewController(animated: true)
         
         dismiss(animated: true, completion: nil)
     }
+    
     @IBOutlet var previewView: UIView!
     @IBOutlet weak var predictionStackView: UIStackView!
    
@@ -42,6 +44,7 @@ class RoomzController: UIViewController {
     override func viewWillDisappear(_ animated: Bool) {
         extractor!.invalidate()
         extractor = nil
+        NotificationCenter.default.removeObserver(self)
     }
     
     func start() {
@@ -49,8 +52,15 @@ class RoomzController: UIViewController {
         extractor?.start()
     }
     
+    @objc func addedContent(notification: Notification) -> Void {
+        if let content = notification.userInfo!["thing"] as! Thing? {
+            NSLog("Showing Bubble with content of: %s", content.name)
+        }
+    }
+    
     func setupAIExtraction() {
         extractor = AIExtractor.init(captureSession: captureSession!, room: room!)
+        NotificationCenter.default.addObserver(self, selector: #selector(addedContent(notification:)), name: NSNotification.Name.contentAdded, object: nil)
     }
     
     func setupRoom() {
