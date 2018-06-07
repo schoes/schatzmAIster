@@ -12,7 +12,7 @@ class ThingFactory {
     
     let names = ["chair", "easy chair", "seat", "sofa", "table", "rug", "lamp", "vase", "cabinet", "shelf", "bed"]
     
-    // luxury, contemporary, bedroom, dining room, 
+    // luxury, contemporary, bedroom, dining room,
     
     init() {
         

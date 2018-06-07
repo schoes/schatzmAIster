@@ -33,6 +33,7 @@
 		37ECA3E720BD4A60004CB7B4 /* Clarifai_Apple_SDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 37ECA3D320BD37E9004CB7B4 /* Clarifai_Apple_SDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		87185A7520C9244200C4C664 /* ThingFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87185A7420C9244200C4C664 /* ThingFactory.swift */; };
 		87185A7720C925D500C4C664 /* Thing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87185A7620C925D500C4C664 /* Thing.swift */; };
+		87185A7920C9485000C4C664 /* LabelFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87185A7820C9485000C4C664 /* LabelFactory.swift */; };
 		D0313C7520C7D9C3004A3CCC /* PredictionEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0313C7420C7D9C3004A3CCC /* PredictionEngine.swift */; };
 		D0C33B5720C80A4400289D7F /* UIPredictionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0C33B5620C80A4400289D7F /* UIPredictionView.swift */; };
 		D0C33B5920C8194700289D7F /* Room.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0C33B5820C8194700289D7F /* Room.swift */; };
@@ -81,6 +82,7 @@
 		37ECA3DF20BD3845004CB7B4 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		87185A7420C9244200C4C664 /* ThingFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThingFactory.swift; sourceTree = "<group>"; };
 		87185A7620C925D500C4C664 /* Thing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Thing.swift; sourceTree = "<group>"; };
+		87185A7820C9485000C4C664 /* LabelFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelFactory.swift; sourceTree = "<group>"; };
 		D0313C7420C7D9C3004A3CCC /* PredictionEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PredictionEngine.swift; sourceTree = "<group>"; };
 		D0C33B5620C80A4400289D7F /* UIPredictionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIPredictionView.swift; sourceTree = "<group>"; };
 		D0C33B5820C8194700289D7F /* Room.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Room.swift; sourceTree = "<group>"; };
@@ -128,6 +130,7 @@
 			isa = PBXGroup;
 			children = (
 				D0C33B5A20C916ED00289D7F /* AIExtractor.swift */,
+				87185A7820C9485000C4C664 /* LabelFactory.swift */,
 				87185A7420C9244200C4C664 /* ThingFactory.swift */,
 				37DBD27C20BC304E0041E266 /* AppDelegate.swift */,
 				37DBD27E20BC304E0041E266 /* ViewController.swift */,
@@ -259,6 +262,7 @@
 				37DBD27F20BC304E0041E266 /* ViewController.swift in Sources */,
 				37DBD27D20BC304E0041E266 /* AppDelegate.swift in Sources */,
 				D0C33B5B20C916ED00289D7F /* AIExtractor.swift in Sources */,
+				87185A7920C9485000C4C664 /* LabelFactory.swift in Sources */,
 				3765E0CB20C7CF4D00D02AD3 /* AdditionalRoomzController.swift in Sources */,
 				3765E0CF20C7FEDF00D02AD3 /* AtticController.swift in Sources */,
 				3721CB2320C916A600ECD0D9 /* AdditionalRoom.swift in Sources */,
