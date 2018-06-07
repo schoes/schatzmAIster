@@ -75,6 +75,7 @@ class PredictionHandler {
     
     func handlePredictions(outputs: [Output]?, error: Error?) {
         for output in outputs! {
+            
             room.acceptContents(concepts: output.dataAsset.concepts!)
         }
     }
