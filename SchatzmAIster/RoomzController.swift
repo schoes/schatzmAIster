@@ -58,7 +58,7 @@ class RoomzController: UIViewController {
 
             let x = Int(CGFloat(arc4random_uniform(UInt32(width))))
 
-            let bubble = Bubble(frame: CGRect(x:x,y: Int(height!) ,width: 100 ,height: 100), text: content.name)
+            let bubble = Bubble(frame: CGRect(x:x,y: Int(height!)-50 ,width: 100 ,height: 100), text: content.name)
             view?.addSubview(bubble)
 
             NSLog("Showing Bubble with content of" + content.name)
