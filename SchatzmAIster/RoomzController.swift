@@ -24,7 +24,7 @@ class RoomzController: UIViewController {
     @IBOutlet var previewView: UIView!
     @IBOutlet weak var predictionStackView: UIStackView!
     @IBOutlet weak var roomName: UINavigationItem!
-    
+
     var captureSession: AVCaptureSession?
     var videoPreviewLayer: AVCaptureVideoPreviewLayer?
     var room: Room?
@@ -59,13 +59,13 @@ class RoomzController: UIViewController {
 
             let x = Int(CGFloat(arc4random_uniform(UInt32(width))))
 
-            let bubble = Bubble(frame: CGRect(x:x,y: Int(height)-100 ,width: 100 ,height: 100), text: content.label)
+            let bubble = Bubble(frame: CGRect(x:x-50,y: Int(height) ,width: 100 ,height: 100), text: content.label)
             view?.addSubview(bubble)
 
             NSLog("Showing Bubble with content of" + content.label)
         }
     }
-    
+
     @objc func changedName(notification: Notification) {
         if let name = notification.userInfo!["name"] as! String? {
             roomName.title = name
