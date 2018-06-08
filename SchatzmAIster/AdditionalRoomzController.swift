@@ -22,10 +22,10 @@ class AdditionalRoomzController : UIViewController{
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
-        if roomManager.hasAdditionalRoom(roomName: "Attic") {
+        if roomManager.hasAdditionalRoom(roomName: "Estrich") {
             createAtticBtn.setTitle("✓  ändern", for: .normal)
         }
-        if roomManager.hasAdditionalRoom(roomName: "Cellar") {
+        if roomManager.hasAdditionalRoom(roomName: "Keller") {
             createCellarBtn.setTitle("✓  ändern", for: .normal)
         }
         if roomManager.hasAdditionalRoom(roomName: "Garage") {
