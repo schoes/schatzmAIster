@@ -81,7 +81,10 @@ class Room {
         if (labels.contains("bedroom") || hasThing(name: "bed")) {
             return .bedroom
         }
-        if (hasThing(name: "sofa") || hasThing(name: "seat")) {
+        if (hasThing(name: "desk")) {
+            return .office
+        }
+        if (hasThing(name: "sofa") || (hasThing(name: "seat") && hasThing(name: "lamp"))) {
             return .livingroom
         }
         if (hasThing(name: "table")) {
