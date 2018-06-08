@@ -11,4 +11,10 @@ import UIKit
 
 class IntroViewController:UIViewController{
     
+    
+    
+    
+    @IBAction func prenameEntered(_ sender: UITextField) {
+         RoomManager.sharedInstance.prename = sender.text!
+    }
 }

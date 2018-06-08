@@ -10,6 +10,7 @@ import Foundation
 class RoomManager{
     static var sharedInstance = RoomManager()
     var roomz:[Room] = []
+    var prename=""
     func addRoom()->Room{
         let room = Room()
         self.roomz.append(room);

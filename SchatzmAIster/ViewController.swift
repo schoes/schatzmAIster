@@ -11,6 +11,8 @@ import Clarifai_Apple_SDK
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var prename: UILabel!
+    @IBOutlet weak var helloPrename: UILabel!
     @IBOutlet weak var vbText: UILabel!
     
     override func viewDidLoad() {
@@ -19,6 +21,9 @@ class ViewController: UIViewController {
         vbText.layer.cornerRadius = 10
         vbText.layer.borderColor = UIColor.black.cgColor
         // Do any additional setup after loading the view, typically from a nib.
+        
+        prename.text = RoomManager.sharedInstance.prename
+
     }
 
     override func didReceiveMemoryWarning() {
