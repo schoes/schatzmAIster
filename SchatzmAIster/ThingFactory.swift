@@ -10,7 +10,7 @@ import Clarifai_Apple_SDK
 
 class ThingFactory {
     
-    let names : [String : String] = ["chair" : "Stuhl", "easy chair" : "Sessel", "seat" : "Sitz", "sofa": "Sofa", "table": "Tisch", "rug": "Teppich", "lamp": "Lampe", "vase": "Vase", "cabinet": "Schrank", "shelf": "Tablar", "bed": "Bett", "desk": "Schreibtisch", "computer": "Computer", "laptop": "Laptop"]
+    let names : [String : String] = ["chair" : "Stuhl", "easy chair" : "Sessel", "seat" : "Sitz", "sofa": "Sofa", "table": "Tisch", "rug": "Teppich", "lamp": "Lampe", "vase": "Vase", "cabinet": "Schrank", "shelf": "Tablar", "bed": "Bett", "desk": "Schreibtisch", "laptop": "Laptop"]
     
     
     
@@ -23,6 +23,7 @@ class ThingFactory {
     }
     
     func extractThings(concepts: [Concept]) -> [Thing] {
+        concepts.forEach({NSLog("Found: " + $0.name)})
         let things = concepts.filter({self.names.keys.contains($0.name)}).map({
             (concept: Concept) -> Thing in
             return Thing.init(name: concept.name, label: self.names[concept.name]!, probability: concept.score)
