@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="NQt-CM-dIp">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="IPJ-CE-blR">
     <device id="retina5_9" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -10,6 +10,55 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Start View Controller-->
+        <scene sceneID="dJV-2L-GR4">
+            <objects>
+                <viewController id="EQu-Y7-Zrz" customClass="StartViewController" customModule="SchatzmAIster" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="MqR-16-tJW">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Herzlich Willkommen bei " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jZ7-Qc-xnJ">
+                                <rect key="frame" x="91" y="123" width="193" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Vorname" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HiR-si-rtL">
+                                <rect key="frame" x="91" y="464" width="193" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Wie lautet dein Vorname" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mvO-mq-J8S">
+                                <rect key="frame" x="94" y="435" width="187" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="schatzmaister_logo" translatesAutoresizingMaskIntoConstraints="NO" id="scJ-Eg-EmP">
+                                <rect key="frame" x="54" y="187" width="267" height="167"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="PjC-jg-2Ia"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="hf7-Ne-jII">
+                        <barButtonItem key="rightBarButtonItem" title="Los geht's" id="jtT-Sk-PWk">
+                            <connections>
+                                <segue destination="BYZ-38-t0r" kind="show" id="V9e-KG-19j"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1IT-VS-HUD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="578" y="-415"/>
+        </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
@@ -46,7 +95,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="983" y="-415"/>
+            <point key="canvasLocation" x="1846" y="-415"/>
         </scene>
         <!--???-->
         <scene sceneID="xqT-dd-MCd">
@@ -81,7 +130,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fRm-E0-0a5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6754.3999999999996" y="-415.27093596059115"/>
+            <point key="canvasLocation" x="7696.8000000000002" y="-415.27093596059115"/>
         </scene>
         <!--Andere Räume-->
         <scene sceneID="oNt-u8-OkY">
@@ -454,24 +503,6 @@
             </objects>
             <point key="canvasLocation" x="6810.3999999999996" y="535.71428571428578"/>
         </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="eCY-NH-Ueg">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="NQt-CM-dIp" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="wum-Sf-C5N">
-                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="0WA-a5-kpH"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="1wf-mS-0XO" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-54" y="-415"/>
-        </scene>
         <!--Your Roomz Controller-->
         <scene sceneID="9cd-yJ-DAx">
             <objects>
@@ -543,7 +574,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CLG-bo-ToN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3256.8000000000002" y="-415.27093596059115"/>
+            <point key="canvasLocation" x="4199.1999999999998" y="-415.27093596059115"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Rg1-oc-xtO">
@@ -615,7 +646,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6Fd-ef-b94" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2071" y="-415"/>
+            <point key="canvasLocation" x="3012" y="-415.27093596059115"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="kH9-tY-PEy">
@@ -687,7 +718,25 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sih-Jy-6ls" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5812" y="-415.27093596059115"/>
+            <point key="canvasLocation" x="6754.3999999999996" y="-415.27093596059115"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="0j7-q1-iyo">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="IPJ-CE-blR" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="cbI-XC-2NS">
+                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="EQu-Y7-Zrz" kind="relationship" relationship="rootViewController" id="p4T-de-wTe"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WrU-tz-6qb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-380" y="-415"/>
         </scene>
     </scenes>
     <resources>
@@ -701,6 +750,7 @@
         <image name="halffull_cellar" width="996" height="562"/>
         <image name="halffull_garage" width="850" height="430"/>
         <image name="man-with-suitcase-icon" width="256" height="256"/>
+        <image name="schatzmaister_logo" width="180" height="180"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="2tj-3F-sN4"/>
