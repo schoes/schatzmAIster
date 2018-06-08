@@ -33,8 +33,7 @@ class Bubble : UILabel {
     func setup() {
         self.clipsToBounds = true
         self.layer.cornerRadius = self.frame.width / 2.0
-        self.layer.borderColor = UIColor.black.cgColor
-        self.layer.borderWidth = 2
+        self.layer.backgroundColor = UIColor(red: 234.0/255.0, green: 221.0/255.0, blue: 150.0/255.0, alpha: 0.8).cgColor
         self.bubbleUp()
     }
     
