@@ -84,7 +84,7 @@ class Room {
         if (hasThing(name: "desk")) {
             return .office
         }
-        if (hasThing(name: "sofa") || hasThing(name: "seat") || hasThing(name: "lamp")) {
+        if (hasThing(name: "sofa") || (hasThing(name: "seat") && hasThing(name: "lamp"))) {
             return .livingroom
         }
         if (hasThing(name: "table")) {
